@@ -1,165 +1,112 @@
-$primary-color: #243040;
+$primary-colour: #ffee83;
+$secondary-colour: #243040;
+
+* {
+	margin: 0;
+	padding: 0;
+}
 
 body {
 	font-family: 'Architects Daughter', sans-serif;
+	background-color: $primary-colour;
 }
 
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+.nav-bar {
+	margin: -90px auto;
+	text-align: center;
+	font-size: 28px;
 }
 
-.center-container {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 75%;
-}
-
-h1{
-    font-size: 48px;
-}
-
-p{
-  font-size: 24px;
-}
-
-.center-ver {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-#paper-back {
+.main-wrapper {
 	width: 100%;
-	height: 100vh;
-	background-color: $primary-color;
-	position: fixed;
-	top: 0;
-	left: 0;
-	font-size: 33px;
-	nav {
-		padding: 120px 34px;
-		a {
-			display: block;
-			margin-bottom: 25px;
-			text-decoration: none;
-			color: rgba(white, 0.7);
-		}
+	padding-top: 50px;
+}
+
+.about-wrapper {
+	width: 100%;
+	padding-top: 50px;
+}
+
+.img-main {
+	width: 100%;
+}
+
+.img-cover {
+	width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+	// Tablet
+	.main-wrapper {
+		width: 500px;
+		margin: 0 auto;
+		padding-top: 50px;
 	}
-}
 
-//prevents the scrolling when the menu is open
-#paper-window {
-	height: 100vh;
-	width: 100vw;
-	position: relative;
-	overflow-x: hidden;
-	overflow-y: scroll;
-	z-index: 2;
-
-	&.tilt {
-		overflow: hidden;
-		pointer-events: none;
-		#paper-front { transform: rotate(10deg) translateZ(0); }
+	.about-wrapper {
+		width: 500px;
+		margin: 0 auto;
+		padding-top: 50px;
 	}
-}
 
-//this is what actually rotates
-#paper-front {
-	pointer-events: auto;
-	position: relative;
-	z-index: 3;
-	background-color: rgba(255, 238, 131, 1);
-	box-shadow: 0 0 20px rgba(black, 0.7);
-	transform-origin: center 70%;
-	transition: all 0.3s ease;
-}
-
-//actual content
-#container {
-	section {
-		height: 600px;
-		text-align: center;
-		&:first-of-type {
-			padding-top: 10vh;
-			h1 { font-size: 45px; }
-			p { font-size: 25px; }
-			@media (max-width: 600px) {
-				padding-top: 15vh;
-				h1 { font-size: 30px; }
-				p { font-size: 18px; }
-			}
-		}
-		&:nth-of-type(2n) {
-			//background-color: lighten($primary-color, 75%);
-		}
+	.nav-bar {
+		margin: -120px auto;
+		font-size: 38px;
 	}
+
 }
 
-.hamburger {
-	position: fixed;
-	z-index: 4;
-	top: 30px;
-	left: 30px;
-	width: 45px;
-	height: 34px;
-	cursor: pointer;
-	user-select: none;
-	span {
-		position: relative;
-
-		&, &:before, &:after {
-			display: block;
-			width: 45px;
-			height: 6px;
-			background-color: $primary-color;
-			border-radius: 2px;
-		}
-
-		&:before, &:after {
-			content: '';
-			position: absolute;
-		}
-		&:before { bottom: -14px; }
-		&:after {	bottom: -28px; }
-
+@media only screen and (min-width: 1000px) {
+	// PC
+	.main-wrapper {
+		width: 700px;
+		padding-top: 50px;
 	}
+
+	.about-wrapper {
+		width: 700px;
+		padding-top: 50px;
+	}
+
+	.nav-bar {
+		margin: -145px auto;
+		font-size: 42px;
+	}
+
 }
 
-.close {
-	position: fixed;
-	top: 30px;
-	left: 30px;
-	width: 45px;
-	height: 34px;
-	cursor: pointer;
-
-	&:before, &:after {
-			content: '';
-			position: absolute;
-			display: block;
-			width: 45px;
-			height: 6px;
-			top: 50%;
-			background-color: white;
-			border-radius: 2px;
-		}
-		&:before { transform: translateY(-50%) rotate(45deg); }
-		&:after {	transform: translateY(-50%) rotate(-45deg); }
-}
-
-
-.tab {
-	margin: 0;
-	padding: 0;
-	list-style: none;
+.btn-anim {
+	display: inline-block;
+	color: black;
+	min-width: 75px;
 	text-decoration: none;
+	margin-right: 20px;
+	padding: 5px;
+	position: relative;
+	text-align: center;
+
+	&:hover {
+		.button-stroke:nth-child(2) {
+			stroke-dashoffset: 0;
+		}
+	}
 }
 
-.tabs > div {
-	 display:none;
-}
-.tabs > div.active {
-	display:block;
+.button-stroke {
+	display: block;
+	width: calc(100% - 40px);
+	height: 20px;
+	stroke: $primary-colour;
+	position: absolute;
+	left: 20px;
+	bottom: -10px;
+	stroke-width: 4;
+
+	&:nth-child(2) {
+		stroke-dasharray: 650px;
+		stroke-dashoffset: 650px;
+		stroke: darken(#263238, 10%);
+		stroke-width: 5;
+		transition: stroke-dashoffset 800ms ease-out;
+	}
 }

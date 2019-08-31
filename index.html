@@ -1,123 +1,55 @@
 <!DOCTYPE html>
 <html lang="en" >
-
-<head>
-  <meta charset="UTF-8">
-  <title>Power Down Podcast</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Architects+Daughter'>
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" href="scss/style.min.css">
-</head>
-<body>
-  <div id="paper-back">
-	<nav>
-		<div class="close"></div>
-		<a href="#home" class="tabbutton">Home</a>
-		<a href="#about" class="tabbutton">About Us</a>
-		<a href="#episodes" class="tabbutton">Episodes</a>
-		<a href="#contacts" class="tabbutton">Contact</a>
-	</nav>
-</div>
-<div id="paper-window">
-	<div id="paper-front">
-		<div class="hamburger"><span></span></div>
-		<div id="container">
-      <div id="home" class="tabcontent">
-  			<section>
-		     <img src="img/text.png" alt="Power Down Podcast" class="center" width="1000px">
-         <img src="img/PDPCover-flat.png" alt="Power Down Podcast" class="center" width="800px">
-       </section>
-       <section>
-       </section>
-     </div>
-       <div id="about" class="tabcontent">
-         <section>
-           <div class="w3-container center-container">
-              <h1 class="w3-panel w3-bottombar w3-border-black">About</h1>
-              <p class="w3-container">Power Down podcast is an all around every subject kind of podcast, sometimes
-                random, mostly interesting, and laid back. Its enough to POWER DOWN from a
-                long day. We started Power Down Podcast as a way to preserve in stone some
-                of our most favorite stories, share them with friends and create more as we
-                power through the hard times. This podcast seeks to enjoy all the little things
-                in life and maybe brighten up a day or two. Tune in every week for a new episode
-                of storytelling, shenanigans and a good time.</p>
-            </div>
-    			</section>
-          <section>
-          <div class="w3-container center-container ">
-            <h1 class="w3-panel w3-bottombar w3-border-black">Cast: Hosts</h1>
-          </div>
-          <div class="w3-container center-container">
-            <div class="w3-cell-row">
-              <div class="w3-container w3-cell">
-                <img src="img/Travis.png" class="w3-panel w3-circle" alt="Travis" style="width:500px; border:8px solid black;">
-              </div>
-              <div class="w3-container w3-cell center-ver ">
-                <h1>Travis</h1>
-                <p>Hey there, its me , Travis aka The Sun. I am very happy that you have come to
-                  visit, try and make yourself comfortable, you might be here for a while. I'm just a truly laid back individual, singer, musician, and a class clown. I hope that I can make your time here worth it and we hope to see you back soon.</p>
-              </div>
-            </div>
-          </div>
-          </section>
-          <section>
-          <div class="w3-container center-container">
-            <div class="w3-cell-row">
-              <div class="w3-container w3-cell">
-                <img src="img/Jason.png" class="w3-panel w3-circle" alt="Jason" style="width:500px; border:8px solid black;">
-              </div>
-              <div class="w3-container w3-cell center-ver">
-                <h1>Jason</h1>
-                <p>Howdy, I'm Jason i usually tell the Shower thoughts. I'm vegetarian
-                  and i hate the word juxtaposition. I also am trying to make a thousand paper cranes this year. Wish me luck!</p>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section>
-          <div class="w3-container center-container">
-            <h1 class="w3-panel w3-bottombar w3-border-black">Cast: Guests</h1>
-          </div>
-          <div class="w3-container center-container">
-            <div class="w3-cell-row">
-              <div class="w3-container w3-cell">
-                <img src="img/Matt.png" class="w3-panel w3-circle" alt="Matt" style="width:500px; border:8px solid black;">
-              </div>
-              <div class="w3-container w3-cell center-ver">
-                <h1>Matt</h1>
-                <p>I'm glad you're here! My name is matthew and I am just another voice.
-                   I share alot of my stories. I am an avid foreign language learner and i love music!</p>
-              </div>
-            </div>
-          </div>
-        </section>
-  		</div>
-      <div id="episodes" class="tabcontent">
-        <section>
-          <h1>episodes</h1>
-          <p>poopy</p>
-        </section>
-        <section></section>
-        <section></section>
-        <section></section>
-      </div>
-      <div id="contacts" class="tabcontent">
-        <section>
-          <h1>contacts</h1>
-          <p>poopy</p>
-        </section>
-        <section></section>
-        <section></section>
-        <section></section>
+  <head>
+    <meta charset="UTF-8">
+    <title>Power Down Podcast</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Architects+Daughter'>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="scss/style.min.css">
+    <svg id="stroke" xmlns="http://www.w3.org/2000/svg" width="0" height="0">
+    	<defs>
+    		<path id="line" d="M2 2c49.7 2.6 100 3.1 150 1.7-46.5 2-93 4.4-139.2 7.3 45.2-1.5 90.6-1.8 135.8-.6" fill="none" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+    	</defs>
+    </svg>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <div class="img-main">
+        <img class="img-cover" src="img\PowerDownPodCast.png" alt="Cover">
+        <div class="nav-bar">
+          <a class="btn-anim" href="#">About Us
+            <svg class="button-stroke" viewBox="0 0 154 13">
+              <use href="#line"></use>
+            </svg>
+            <svg class="button-stroke" viewBox="0 0 154 13">
+              <use href="#line"></use>
+            </svg>
+          </a>
+          <a class="btn-anim" href="#">Episodes
+            <svg class="button-stroke" viewBox="0 0 154 13">
+              <use href="#line"></use>
+            </svg>
+            <svg class="button-stroke" viewBox="0 0 154 13">
+              <use href="#line"></use>
+            </svg>
+          </a>
+          <a class="btn-anim" href="#">Contacts
+            <svg class="button-stroke" viewBox="0 0 154 13">
+              <use href="#line"></use>
+            </svg>
+            <svg class="button-stroke" viewBox="0 0 154 13">
+              <use href="#line"></use>
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
-	</div>
-</div>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"
-integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-crossorigin="anonymous"></script>
-<script  src="js/script.js"></script>
-</body>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script  src="js/script.js"></script>
+  </body>
 </html>
