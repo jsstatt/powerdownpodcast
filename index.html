@@ -164,11 +164,30 @@
         <p class="font-big">Contacts:</p>
       </span>
       <hr>
-      <div class="text">
-        <p class="text-link">Email: powerdownpodcast@gmail.com</p>
-        <p class="text-link">Facebook:<a href="https://www.facebook.com/powerdownpodcast">www.facebook.com/powerdownpodcast</a></p>
-        <p class="text-link">instagram:<a href="https://www.instagram.com/powerdownpodcast/">www.instagram.com/powerdownpodcast</a></p>
-      </div>
+      <form action="https://formspree.io/powerdownpodcast@gmail.com" method="POST">
+        <label>
+          Email:
+          <input type="email" class="email" name="email" value="">
+        </label>
+        <br>
+        <label>
+          Subject:
+          <input type="text" class="subject" name="subject" value="">
+        </label>
+        <br>
+        <label>
+          Message:
+          <textarea name="message" class="message" rows="8" cols="80"></textarea>
+        </label>
+        <div class="status">
+
+        </div>
+        <div class="test">
+
+        </div>
+        <br>
+        <button type="submit" class="submit" name="button">Send</button>
+      </form>
       <hr>
       <br>
       <div class="footer-wrapper">
