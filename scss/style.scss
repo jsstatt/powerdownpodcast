@@ -145,7 +145,7 @@ input {
 
 textarea {
   width: 100%;
-  height: 150px;
+  height: 200px;
   padding: 12px 20px;
   box-sizing: border-box;
   border: 2px solid #ccc;
@@ -153,6 +153,19 @@ textarea {
   background-color: #f8f8f8;
   font-size: 16px;
   resize: none;
+}
+
+.button-submit {
+  background-color: lightgrey;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 768px) {
