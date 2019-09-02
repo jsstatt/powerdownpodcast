@@ -35,44 +35,9 @@ body {
 	width: 100%;
 }
 
-@media only screen and (min-width: 768px) {
-	// Tablet
-	.main-wrapper {
-		width: 500px;
-		margin: 0 auto;
-		padding-top: 50px;
-	}
-
-	.about-wrapper {
-		width: 500px;
-		margin: 0 auto;
-		padding-top: 50px;
-	}
-
-	.nav-bar {
-		margin: -120px auto;
-		font-size: 38px;
-	}
-
-}
-
-@media only screen and (min-width: 1000px) {
-	// PC
-	.main-wrapper {
-		width: 700px;
-		padding-top: 50px;
-	}
-
-	.about-wrapper {
-		width: 700px;
-		padding-top: 50px;
-	}
-
-	.nav-bar {
-		margin: -145px auto;
-		font-size: 42px;
-	}
-
+.topright {
+  float: right;
+	font-size: 50px
 }
 
 .btn-anim {
@@ -109,4 +74,150 @@ body {
 		stroke-width: 5;
 		transition: stroke-dashoffset 800ms ease-out;
 	}
+}
+
+.wrapper-icons{
+	padding-left: 15px;
+}
+
+.wrapper-icons a {
+	font-size: 38px;
+	padding-right: 5px;
+}
+
+.wrapper-content {
+	padding: 200px 50px 50px;
+}
+
+.tabcontent {
+  display: none;
+}
+
+hr {
+	margin-left: auto;
+	margin-right: auto;
+	height: 2px;
+	background-color:black;
+	color:black;
+	border: 0 none;
+}
+
+.text {
+	font-size: 20px;
+}
+
+.font-big {
+	font-size: 28px;
+}
+
+.cast {
+	display:block;
+}
+
+.img-cast {
+	width: 100%;
+}
+
+.footer-wrapper {
+	width: 75px;
+	margin: 0 auto;
+	padding-bottom: 50px;
+}
+
+.logo {
+	width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+	// Tablet
+	.main-wrapper {
+		width: 500px;
+		margin: 0 auto;
+		padding-top: 50px;
+	}
+
+	.about-wrapper {
+		width: 500px;
+		margin: 0 auto;
+		padding-top: 50px;
+	}
+
+	.nav-bar {
+		margin: -120px auto;
+		font-size: 38px;
+	}
+
+	.wrapper-content {
+		padding: 200px 150px 150px;
+	}
+
+	.cast {
+		display: grid;
+		grid-template-columns: 30% 70%;
+	}
+
+	.font-big {
+		font-size: 38px;
+	}
+
+	.text {
+		font-size: 24px;
+	}
+
+	.footer-wrapper {
+		width: 100px;
+		margin: 0 auto;
+		padding-bottom: 50px;
+	}
+
+		.logo {
+			width: 100%;
+		}
+
+}
+
+@media only screen and (min-width: 1000px) {
+	// PC
+	.main-wrapper {
+		width: 700px;
+		padding-top: 50px;
+	}
+
+	.about-wrapper {
+		width: 700px;
+		padding-top: 50px;
+	}
+
+	.nav-bar {
+		margin: -145px auto;
+		font-size: 42px;
+	}
+
+	.wrapper-content {
+		padding: 200px 250px 250px;
+	}
+
+	.cast {
+		display: grid;
+		grid-template-columns: 30% 70%;
+	}
+
+	.font-big {
+		font-size: 42px;
+	}
+
+	.text {
+		font-size: 28px;
+	}
+
+.footer-wrapper {
+	width: 150px;
+	margin: 0 auto;
+	padding-bottom: 50px;
+}
+
+	.logo {
+		width: 100%;
+	}
+
 }

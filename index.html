@@ -8,6 +8,7 @@
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Architects+Daughter'>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="scss/style.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <svg id="stroke" xmlns="http://www.w3.org/2000/svg" width="0" height="0">
     	<defs>
     		<path id="line" d="M2 2c49.7 2.6 100 3.1 150 1.7-46.5 2-93 4.4-139.2 7.3 45.2-1.5 90.6-1.8 135.8-.6" fill="none" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
@@ -15,11 +16,19 @@
     </svg>
   </head>
   <body>
+    <div class="wrapper-icons">
+      <a href="https://www.facebook.com/powerdownpodcast"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+      <a href="https://www.instagram.com/powerdownpodcast/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+      <a href="https://open.spotify.com/show/2gG7e11H7EuHACaIMNjH9k?si=QVAH4tX3QkOxOi7ERTu99A"><i class="fa fa-spotify" aria-hidden="true"></i></a>
+      <a href="https://soundcloud.com/powerdownpodcast"><i class="fa fa-soundcloud" aria-hidden="true"></i></a>
+      <a href="https://podcasts.apple.com/us/podcast/power-down-podcast/id1455602373"><i class="fa fa-podcast" aria-hidden="true"></i></a>
+      <a href="http://feeds.feedburner.com/PowerDownPodcast"><i class="fa fa-rss-square" aria-hidden="true"></i></a>
+    </div>
     <div class="main-wrapper">
       <div class="img-main">
         <img class="img-cover" src="img\PowerDownPodCast.png" alt="Cover">
         <div class="nav-bar">
-          <a class="btn-anim" href="#">About Us
+          <a class="btn-anim" class="tablinks" onclick="openTab(event, 'about')">About Us
             <svg class="button-stroke" viewBox="0 0 154 13">
               <use href="#line"></use>
             </svg>
@@ -27,7 +36,7 @@
               <use href="#line"></use>
             </svg>
           </a>
-          <a class="btn-anim" href="#">Episodes
+          <a class="btn-anim" class="tablinks" onclick="openTab(event, 'episodes')">Episodes
             <svg class="button-stroke" viewBox="0 0 154 13">
               <use href="#line"></use>
             </svg>
@@ -35,7 +44,7 @@
               <use href="#line"></use>
             </svg>
           </a>
-          <a class="btn-anim" href="#">Contacts
+          <a class="btn-anim"  class="tablinks" onclick="openTab(event, 'contacts')">Contacts
             <svg class="button-stroke" viewBox="0 0 154 13">
               <use href="#line"></use>
             </svg>
@@ -44,6 +53,124 @@
             </svg>
           </a>
         </div>
+      </div>
+    </div>
+    <div id="about" class="tab tabcontent wrapper-content">
+      <div class="text">
+        <span>
+          <p onclick="about.style.display='none'" class="topright font-big"><i class="fa fa-angle-up" aria-hidden="true"></i></p>
+          <p class="font-big">About Us:</p>
+        </span>
+        <hr>
+        <p>Power Down podcast is an all around every subject kind of podcast,
+          sometimes random, mostly interesting, and laid back. Its enough to POWER
+          DOWN from a long day. We started Power Down Podcast as a way to preserve
+          in stone some of our most favorite stories, share them with friends and
+          create more as we power through the hard times. This podcast seeks to enjoy
+          all the little things in life and maybe brighten up a day or two. Tune in
+          every week for a new episode of storytelling, shenanigans and a good time.</p>
+      </div>
+      <br>
+      <br>
+      <p class="font-big">Cast:</p>
+      <hr>
+      <br>
+      <div class="cast">
+          <div class="">
+            <img class="img-cast" src="img/Travis.png" alt="Travis">
+          </div>
+          <div class="text text-middle">
+            <p class="font-big">Travis</p>
+            <br>
+            <p>Hey there, its me, Travis aka The Sun. I am very happy that you have
+            come to visit, try and make yourself comfortable, you might be here
+            for a while. I'm just a truly laid back individual, singer, musician,
+            and a class clown. I hope that I can make your time here worth it and
+            we hope to see you back soon.<p>
+          </div>
+          <div class="">
+            <img class="img-cast" src="img/Jason.png" alt="Jason">
+          </div>
+          <div class="text text-middle">
+            <p class="font-big">Jason</p>
+            <br>
+            <p>Howdy, I'm Jason. I am a Jedi master and run a Saber Club at my
+            university. i am the artist for the podcast and i enjoy art, cosplay
+            and programming. I'm vegetarian and i hate the word juxtaposition.
+            hopefully i can share a few smiles with our content.<p>
+          </div>
+      </div>
+      <br>
+      <br>
+      <p class="font-big">Guest Cast:</p>
+      <hr>
+      <br>
+      <div class="cast">
+          <div class="">
+            <img class="img-cast" src="img/Matt.png" alt="Travis">
+          </div>
+          <div class="text text-middle">
+            <p class="font-big">Matt</p>
+            <br>
+            <p>I'm glad to be here! My name is Matthew and I am just another
+            voice. I share alot of my stories. I am an avid foreign language
+            learner and i love music!<p>
+          </div>
+          <div class="">
+            <img class="img-cast" src="img/Hunter.png" alt="Jason">
+          </div>
+          <div class="text text-middle">
+            <p class="font-big">Hunter</p>
+            <br>
+            <p>Hi, I'm Hunter. metal, prog-metal, death metal, you name it. I love
+            music, movies and having fun. You will mostly catch me playing Tony Hawk or Guitar Hero  <p>
+          </div>
+          <div class="">
+            <img class="img-cast" src="img/Preston.png" alt="Jason">
+          </div>
+          <div class="text text-middle">
+            <p class="font-big">Preston</p>
+            <br>
+            <p>Hello there, I'm Preston. How is everyone doing! I like music, video
+            games and anime. hope you enjoy what i bring to the table <p>
+          </div>
+      </div>
+      <hr>
+      <br>
+      <div class="footer-wrapper">
+        <img class="logo" src="img/logo.png" alt="Logo">
+      </div>
+    </div>
+    <div id="episodes" class="tab tabcontent wrapper-content">
+      <div class="text">
+        <span>
+          <p onclick="episodes.style.display='none'" class="topright font-big"><i class="fa fa-angle-up" aria-hidden="true"></i></p>
+          <p class="font-big">Episodes:</p>
+        </span>
+        <hr>
+        <iframe width="100%" height="700px" scrolling="no" frameborder="no" allow="autoplay"
+          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/579253782&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+        </iframe>
+        <hr>
+        <br>
+        <div class="footer-wrapper">
+          <img class="logo" src="img/logo.png" alt="Logo">
+        </div>
+      </div>
+    </div>
+    <div id="contacts" class="tab tabcontent wrapper-content">
+      <span>
+        <p onclick="contacts.style.display='none'" class="topright font-big"><i class="fa fa-angle-up" aria-hidden="true"></i></p>
+        <p class="font-big">Contacts:</p>
+      </span>
+      <hr>
+      <p class="font-big">Email: powerdownpodcast@gmail.com</p>
+      <p class="font-big">Facebook: <a href="https://www.facebook.com/powerdownpodcast">www.facebook.com/powerdownpodcast</a></p>
+      <p class="font-big">instagram: <a href="https://www.instagram.com/powerdownpodcast/">www.instagram.com/powerdownpodcast</a></p>
+      <hr>
+      <br>
+      <div class="footer-wrapper">
+        <img class="logo" src="img/logo.png" alt="Logo">
       </div>
     </div>
 
