@@ -85,6 +85,10 @@ footer{
   color: white;
 }
 
+.vertical {
+  text-align: center;
+}
+
 .yozah {
   font-family: 'yozahregular';
   color: white;
@@ -109,5 +113,20 @@ footer{
     "content2 content2"
     "content3 content3"
     "footer footer"
+  }
+
+  .vertical {
+    text-align: center;
+    vertical-align: middle;
+    writing-mode: vertical-rl
+  }
+
+  .font-big{
+    font-size: 32px;
+  }
+
+  .btn {
+    font-size: 25px;
+    cursor: pointer;
   }
 }
