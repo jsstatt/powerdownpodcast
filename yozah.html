@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="UTF-8">
+    <title>Yozah</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Architects+Daughter'>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/kit/stylesheet.css" type="text/css" charset="utf-8" />
+    <body ng-app="ngPage" ng-controller="pageController">
+
+
+    <div class="container">
+      <nav class=""><h1 class="font-white yozah font-big">b-</h1></nav>
+      <main class="">
+        <h3 class="font-white yozah font-big">{{str}}</h3>
+      </main>
+      <div id="sidebar" class="sidebar">
+        <div class="">
+            <a class="btn yozah" ng-click="addToString(1);">1</a>
+            <a class="btn yozah" ng-click="addToString(2);">2</a>
+            <a class="btn yozah" ng-click="addToString(3);">3</a>
+            <a class="btn yozah" ng-click="addToString(4);">4</a>
+          </div>
+          <div class="">
+            <a class="btn yozah" ng-click="addToString(5);">5</a>
+          </div>
+          <div class="">
+            <a class="btn yozah" ng-click="addToString(6);">6</a>
+            <a class="btn yozah" ng-click="addToString(9);">9</a>
+            <a class="btn yozah" ng-click="addToString(7);">7</a>
+            <a class="btn yozah" ng-click="addToString('.');">.</a>
+          </div>
+          <div class="">
+            <a class="btn yozah" ng-click="addToString(8);">8</a>
+            <a class="btn yozah" ng-click="addToString(',');">,</a>
+            <a class="btn yozah" ng-click="addToString('_');">_</a>
+            <a class="btn yozah" ng-click="addToString('\u201D');">&#8221;</a>
+          </div>
+          <div class="">
+            <a class="btn yozah" ng-click="addToString('0');">0</a>
+            <a class="btn yozah" ng-click="addToString('@');">@</a>
+            <a class="btn yozah" ng-click="addToString('*');">*</a>
+            <a class="btn yozah" ng-click="addToString('#');">#</a>
+          </div>
+          <div class="">
+              <a class="btn yozah" ng-click="addToString('$');">$</a>
+              <a class="btn yozah" ng-click="addToString('+');">+</a>
+              <a class="btn yozah" ng-click="addToString('<');"><</a>
+              <a class="btn yozah" ng-click="addToString(']');">]</a>
+          </div>
+          <div class="">
+              <a class="btn yozah" ng-click="addToString('Ā');">Ā</a>
+              <a class="btn yozah" ng-click="addToString('ą');">ą</a>
+          </div>
+          <div class="">
+            <a class="btn yozah" ng-click="addToString('!');">!</a>
+            <a class="btn yozah" ng-click="addToString('}');">}</a>
+            <a class="btn yozah" ng-click="backSpace();">~</a>
+          </div>
+      </div>
+      <div id="content1" class="content1">
+        <h3 class="font-white normal-font">Content 1</h3>
+      </div>
+      <div id="content2" class="content2">
+        <h3 class="font-white normal-font">Content 2</h3>
+      </div>
+      <div id="content3" class="content3">
+        <h3 class="font-white normal-font">Content 3</h3>
+      </div>
+      <footer class="">
+        <h3 class="font-white normal-font">Footer</h3>
+      </footer>
+    </div>
+
+
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
+  <script src="js/pageController.js"></script>
+</html>

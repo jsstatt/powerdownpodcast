@@ -1,18 +1,20 @@
 $primary-colour: #ffee83;
 $secondary-colour: #243040;
 
+
 * {
 	margin: 0;
 	padding: 0;
 }
 
 body {
-	font-family: 'Architects Daughter', sans-serif;
-	background-color: $primary-colour;
+	//font-family: 'Architects Daughter', sans-serif;
+	//font-family: 'yozahregular';
+	//background-color: $primary-colour;
 }
 
 .nav-bar {
-	margin: -90px auto;
+	margin: -120px auto;
 	text-align: center;
 	font-size: 28px;
 }
@@ -33,6 +35,65 @@ body {
 
 .img-cover {
 	width: 100%;
+	height: 600px;
+	background-image: url("../img/episodes/Episode1.png");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	backface-visibility: hidden;
+  animation: slideCovers 120s linear infinite;
+	animation-timing-function: ease-in-out;
+}
+
+@keyframes slideCovers{
+	6% {
+		background-image: url("../img/episodes/Episode1.png");
+	}
+	12% {
+		background-image: url("../img/episodes/Episode2.png");
+	}
+	18% {
+		background-image: url("../img/episodes/Episode3.png");
+	}
+	24% {
+		background-image: url("../img/episodes/Episode4.png");
+	}
+	30% {
+		background-image: url("../img/episodes/Episode5.png");
+	}
+	36% {
+		background-image: url("../img/episodes/Episode6.png");
+	}
+	42% {
+		background-image: url("../img/episodes/Episode7.png");
+	}
+	48% {
+		background-image: url("../img/episodes/Episode8.png");
+	}
+	54% {
+		background-image: url("../img/episodes/Episode9.png");
+	}
+	60% {
+		background-image: url("../img/episodes/Episode10.png");
+	}
+	66% {
+		background-image: url("../img/episodes/Episode11.png");
+	}
+	72% {
+		background-image: url("../img/episodes/Episode12.png");
+	}
+	78% {
+		background-image: url("../img/episodes/Episode13.png");
+	}
+	84% {
+		background-image: url("../img/episodes/Episode14.png");
+	}
+	90% {
+		background-image: url("../img/episodes/Episode15.png");
+	}
+	96% {
+		background-image: url("../img/episodes/Episode16.png");
+	}
 }
 
 .topright {
@@ -233,7 +294,7 @@ textarea {
 	}
 
 	.nav-bar {
-		margin: -145px auto;
+		margin: -100px auto;
 		font-size: 42px;
 	}
 
@@ -267,5 +328,4 @@ textarea {
 	.logo {
 		width: 100%;
 	}
-
 }

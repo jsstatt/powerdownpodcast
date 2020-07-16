@@ -1,3 +1,7 @@
+// String Writer
+angular.module('ngPage', []);
+
+
 // Tab
 function openTab(evt, tabName) {
   var i, tabcontent, tablinks;
