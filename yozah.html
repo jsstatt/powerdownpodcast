@@ -11,77 +11,296 @@
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="fonts/kit/stylesheet.css" type="text/css" charset="utf-8" />
     <body ng-app="ngPage" ng-controller="pageController">
+      <nav class="navbar">
+        <ul class="navbar-nav">
+          <li class="logo" onclick="openTab(event, 'home')">
+            <a href="#" class="nav-link">
+              <span class="link-text normal">Yozah</span>
+              <i class="yozah">b-</i>
+            </a>
+          </li>
+          <li class="nav-item" onclick="openTab(event, 'writer')"><a class="nav-link btn">
+              <i class="fas fa-keyboard"></i>
+              <span class="link-text"><h1 class="normal">Writer</h1><h1 class="yozah">Wfi</h1></span></a>
+          </li>
+          <li class="nav-item" onclick="openTab(event, 'language')"><a class="nav-link btn">
+            <i class="fas fa-language"></i>
+            <span class="link-text"><h1 class="normal">language</h1><h1 class="yozah">gEty</h1></span></a>
+          </li>
+          <li class="nav-item" onclick="openTab(event, 'culture)"><a class="nav-link btn">
+            <i class="fas fa-atlas"></i>
+            <span class="link-text"><h1 class="normal">Culture</h1><h1 class="yozah">MfZ</h1></span></a>
+          </li>
+          <li class="nav-item" onclick="openTab(event, 'info')"><a class="nav-link btn">
+            <i class="fas fa-info-circle"></i>
+            <span class="link-text"><h1 class="normal">info</h1><h1 class="yozah">iNp</h1></span></a>
+          </li>
+          <li class="nav-item" ><a class="nav-link btn">
+            <i class="fas fa-lightbulb"></i>
+            <span class="link-text"><h1 class="normal">Theme</h1><h1 class="yozah">^ij</h1></span></a>
+          </li>
+        </ul>
+      </nav>
+      <main>
+        <div id="home" class="page tabcontent">
+          <p>Home</p>
+        </div>
+        <div id="writer" class="page tabcontent">
+          <p>writer</p>
+            <div class="button-container outline">
+              <div class="">
+                <a class="btn yozah" ng-click="addToString(1);">1</a>
+                <a class="btn yozah" ng-click="addToString(2);">2</a>
+                <a class="btn yozah" ng-click="addToString(3);">3</a>
+                <a class="btn yozah" ng-click="addToString(4);">4</a>
+              </div>
+              <div class="">
+                <a class="btn yozah" ng-click="addToString(5);">5</a>
+              </div>
+              <div class="">
+                <a class="btn yozah" ng-click="addToString(6);">6</a>
+                <a class="btn yozah" ng-click="addToString(9);">9</a>
+                <a class="btn yozah" ng-click="addToString(7);">7</a>
+                <a class="btn yozah" ng-click="addToString('.');">.</a>
+              </div>
+              <div class="">
+                <a class="btn yozah" ng-click="addToString(8);">8</a>
+                <a class="btn yozah" ng-click="addToString(',');">,</a>
+                <a class="btn yozah" ng-click="addToString('_');">_</a>
+                <a class="btn yozah" ng-click="addToString('\u201D');">&#8221;</a>
+              </div>
+              <div class="">
+                <a class="btn yozah" ng-click="addToString('0');">0</a>
+                <a class="btn yozah" ng-click="addToString('@');">@</a>
+                <a class="btn yozah" ng-click="addToString('*');">*</a>
+                <a class="btn yozah" ng-click="addToString('#');">#</a>
+              </div>
+              <div class="">
+                  <a class="btn yozah" ng-click="addToString('$');">$</a>
+                  <a class="btn yozah" ng-click="addToString('+');">+</a>
+                  <a class="btn yozah" ng-click="addToString('<');"><</a>
+                  <a class="btn yozah" ng-click="addToString(']');">]</a>
+              </div>
+              <div class="">
+                  <a class="btn yozah" ng-click="addToString('Ā');">Ā</a>
+                  <a class="btn yozah" ng-click="addToString('ą');">ą</a>
+              </div>
+              <div class="">
+                <a class="btn yozah" ng-click="addToString('!');">!</a>
+                <a class="btn yozah" ng-click="addToString('}');">}</a>
+                <a class="btn yozah" ng-click="backSpace();">~</a>
 
-
-    <div class="container">
-      <nav class=""><h1 class="font-white yozah font-big">b-</h1></nav>
-      <main class="">
-        <h3 class="font-white yozah font-big vertical">{{str}}</h3>
+              </div>
+            </div>
+            <div class="">
+              <h1 class="output yozah">{{str}}</h1>
+            </div>
+          </div>
+        <div id="language" class="page tabcontent">
+          <table class="tables">
+            <tbody>
+            <tr>
+            <td colspan="2" width="732">
+            <p><strong>Yozah</strong></p>
+            </td>
+            </tr>
+            <tr>
+            <td colspan="2" width="732">
+            <p>Below is a tutorial on the grammer of Yozah</p>
+            </td>
+            </tr>
+            <tr>
+            <td width="312">
+            <p><strong>Consonants:</strong></p>
+            </td>
+            <td width="420">
+            <p><strong>Vowels:</strong></p>
+            </td>
+            </tr>
+            <tr>
+            <td width="312">
+            <p><span class="yozah">7</span>/ <span class="yozah">  .</span><em> M</em> - /m/ - [m/mʲ]</p></span>
+            <p><span class="yozah">8</span>/ <span class="yozah">  ,</span> <em>T</em> - /t/ - [t/t&rsquo;]</p>
+            <p><span class="yozah">@</span>/ <span class="yozah">  &lsquo;</span><em>0</em> - /d/ - [d/dʲ]</p>
+            <p><span class="yozah">$</span> <em>K</em> - /k/</p>
+            <p><span class="yozah">&rdquo;</span> <em>N - /n/</em></p>
+            <p><span class="yozah">_</span> <em>Ng</em> - /ŋ/</p>
+            <p><span class="yozah">Ā</span> <em>S </em>- /s/</p>
+            <p><span class="yozah">ą</span> <em> R </em>- /ɾ/</p>
+            <p><span class="yozah">6</span>/ <span class="yozah">  9</span><em>P </em>- /p/ - [p/pʲ]</p>
+            <p><span class="yozah">#</span>/ <span class="yozah">  *</span><em> B</em> - /b/ - [b/bʲ]</p>
+            <p><span class="yozah">&lt;</span> <em> Ch</em> - /t͡ɕ/</p>
+            <p><span class="yozah">+</span> <em>Zh</em> - /z/</p>
+            <p><span class="yozah">]</span> <em> Sha</em> - /ʂ/</p>
+            </td>
+            <td width="420">
+            <p><em>Article vowels:</em></p>
+            <p><span class="yozah">a</span><em> Ya</em> - /ja/</p>
+            <p><span class="yozah">A</span><em> Ye</em> - /ji/</p>
+            <p><span class="yozah">b</span><em> Yo</em> - /jo/</p>
+            <p><span class="yozah">B</span><em> Yo - </em>/ju/&nbsp;&nbsp;</p>
+            <p>&nbsp;</p>
+            <p><em>Normal vowels:</em></p>
+            <p><span class="yozah">3</span> <em>A</em>- /a/</p>
+            <p><span class="yozah">1</span><em> E</em> - /i/</p>
+            <p><span class="yozah">4</span> <em>O </em>- /o/</p>
+            <p><span class="yozah">2</span><em> U</em> - /u/</p>
+            <p>&nbsp;</p>
+            </td>
+            </tr>
+            <tr>
+            <td colspan="2" width="732">
+            <p><strong>Phonetics variation:</strong></p>
+            </td>
+            </tr>
+            <tr>
+            <td colspan="2" width="732">
+            <p>Within the VCV structure the non-fricative consonants usually become palatalized. Outside of this structure they will often fall more towards a standard pronunciation.</p>
+            </td>
+            </tr>
+            <tr>
+            <td colspan="2" width="732">
+            <p><strong>Syllable structure:</strong></p>
+            </td>
+            </tr>
+            <tr>
+            <td colspan="2" width="732">
+            <p>Nouns most commonly use CVCVC structure while verbs mostly use VCVC. Article vowels are mostly only seen in articles however both phonemes can exist next to each other in other words. Nouns can only end with a vowel. The minimal structure that is allowed is V for articles, CV for nouns and VC for verb.&nbsp; Consonant cluster can not exceed 2 phonemes without requiring a vowel in between.</p>
+            </td>
+            </tr>
+            <tr>
+            <td colspan="2" width="732">
+            <p><strong>Suprasegmental Features:</strong></p>
+            </td>
+            </tr>
+            <tr>
+            <td colspan="2" width="732">
+            <p>Tone: Questions are formed using falling tone while statements are made with a medium tone. Aggression can often be expressed with low tone while joy can be expressed with a higher tone.</p>
+            </td>
+            </tr>
+            <tr>
+            <td colspan="2" width="732">
+            <p>Stress: The stress of a word usually falls on the nucleus of the syllable so in the common VCV the stress is on the C.</p>
+            </td>
+            </tr>
+            </tbody>
+          </table>
+          <table class="tables">
+            <tbody>
+            <tr>
+            <td colspan="4" width="732">
+            <p><strong>Pronouns:</strong></p>
+            </td>
+            </tr>
+            <tr>
+            <td colspan="4" width="732">
+            <p>Unless a pronoun is used on its own, they will always be affixed to the verb. The subject pronoun is attached as a prefix while the object and indirect object pronoun is attached as a suffix.</p>
+            </td>
+            </tr>
+            <tr>
+            <td width="129">
+            <p><em>Stand alone:</em></p>
+            </td>
+            <td width="135">
+            <p><em>Nominative:</em></p>
+            </td>
+            <td width="162">
+            <p><em>Accusative:</em></p>
+            </td>
+            <td width="306">
+            <p><em>Dative:</em></p>
+            </td>
+            </tr>
+            <tr>
+            <td width="129">
+            <p><em>Ka- </em>You (familiar)</p>
+            <p><em>Zha &ndash; </em>You (Polite)</p>
+            <p><em>Pa &ndash; </em>Me</p>
+            <p><em>Nga &ndash; </em>He</p>
+            <p><em>Ma </em>&ndash; She</p>
+            <p><em>Ta &ndash; </em>Ze</p>
+            <p><em>Cha &ndash; </em>We</p>
+            <p><em>Da &ndash; </em>They</p>
+            <p><em>Ata &ndash; </em>Who</p>
+            </td>
+            <td width="135">
+            <p><em>K- </em>You (familiar)</p>
+            <p><em>Zh &ndash; </em>You (Polite)</p>
+            <p><em>P &ndash; </em>I</p>
+            <p><em>Ng &ndash; </em>He</p>
+            <p><em>M &ndash; </em>She</p>
+            <p><em>T &ndash; </em>Ze</p>
+            <p><em>Ch &ndash;</em> We</p>
+            <p><em>D &ndash; </em>They</p>
+            <p><em>At - Whom</em></p>
+            </td>
+            <td width="162">
+            <p><em>Kar- </em>You (familiar)</p>
+            <p><em>Zhar &ndash; </em>You (Polite)</p>
+            <p><em>Par &ndash; </em>Me</p>
+            <p><em>Ngar &ndash; </em>Him</p>
+            <p><em>Mar &ndash; </em>Her</p>
+            <p><em>Tar &ndash; </em>Hir</p>
+            <p><em>Char &ndash; </em>Us</p>
+            <p><em>Dar &ndash; </em>Them</p>
+            <p><em>Atar &shy;&shy;&ndash; </em>Who</p>
+            </td>
+            <td width="306">
+            <p><em>Kor- </em>You (familiar)</p>
+            <p><em>Zhor &ndash; </em>You (Polite)</p>
+            <p><em>Por &ndash; </em>Me</p>
+            <p><em>Ngor &ndash; </em>Him</p>
+            <p><em>Mor &ndash; H</em>er</p>
+            <p><em>Tor &ndash; </em>Hir</p>
+            <p><em>Chor &ndash; </em>Us</p>
+            <p><em>Dor &ndash; </em>Them</p>
+            <p><em>Ator -</em> who</p>
+            </td>
+            </tr>
+            <tr>
+            <td colspan="4" width="732">
+            <p><em>Examples:</em></p>
+            </td>
+            </tr>
+            <tr>
+            <td width="129">
+            <p>Ka &ndash; You (referred to singularly without anything else)</p>
+            </td>
+            <td width="135">
+            <p>I eat</p>
+            <p><em>p</em>-(eat)</p>
+            <p><em>p- oju</em></p>
+            <p><em>poju</em></p>
+            </td>
+            <td width="162">
+            <p>I see you</p>
+            <p><em>p</em>-(see)-<em>kar</em></p>
+            <p><em>p-up<sup>j</sup>ar-kar</em></p>
+            <p><em>pup<sup>j</sup>arkar</em></p>
+            </td>
+            <td width="306">
+            <p>I give you bread</p>
+            <p><em>p</em>-(give)-<em>kor </em>(bread)</p>
+            <p><em>p-zhak-kor </em>(bread)</p>
+            <p><em>pzhakor </em>(bread)</p>
+            </td>
+            </tr>
+            </tbody>
+            </table>
+        </div>
+        <div id="culture" class="page tabcontent">
+          <p>Culture</p>
+        </div>
+        <div id="info" class="page tabcontent">
+          <p>Info</p>
+        </div>
       </main>
-      <div id="sidebar" class="sidebar">
-        <div class="">
-            <a class="btn yozah" ng-click="addToString(1);">1</a>
-            <a class="btn yozah" ng-click="addToString(2);">2</a>
-            <a class="btn yozah" ng-click="addToString(3);">3</a>
-            <a class="btn yozah" ng-click="addToString(4);">4</a>
-          </div>
-          <div class="">
-            <a class="btn yozah" ng-click="addToString(5);">5</a>
-          </div>
-          <div class="">
-            <a class="btn yozah" ng-click="addToString(6);">6</a>
-            <a class="btn yozah" ng-click="addToString(9);">9</a>
-            <a class="btn yozah" ng-click="addToString(7);">7</a>
-            <a class="btn yozah" ng-click="addToString('.');">.</a>
-          </div>
-          <div class="">
-            <a class="btn yozah" ng-click="addToString(8);">8</a>
-            <a class="btn yozah" ng-click="addToString(',');">,</a>
-            <a class="btn yozah" ng-click="addToString('_');">_</a>
-            <a class="btn yozah" ng-click="addToString('\u201D');">&#8221;</a>
-          </div>
-          <div class="">
-            <a class="btn yozah" ng-click="addToString('0');">0</a>
-            <a class="btn yozah" ng-click="addToString('@');">@</a>
-            <a class="btn yozah" ng-click="addToString('*');">*</a>
-            <a class="btn yozah" ng-click="addToString('#');">#</a>
-          </div>
-          <div class="">
-              <a class="btn yozah" ng-click="addToString('$');">$</a>
-              <a class="btn yozah" ng-click="addToString('+');">+</a>
-              <a class="btn yozah" ng-click="addToString('<');"><</a>
-              <a class="btn yozah" ng-click="addToString(']');">]</a>
-          </div>
-          <div class="">
-              <a class="btn yozah" ng-click="addToString('Ā');">Ā</a>
-              <a class="btn yozah" ng-click="addToString('ą');">ą</a>
-          </div>
-          <div class="">
-            <a class="btn yozah" ng-click="addToString('!');">!</a>
-            <a class="btn yozah" ng-click="addToString('}');">}</a>
-            <a class="btn yozah" ng-click="backSpace();">~</a>
-          </div>
-      </div>
-      <div id="content1" class="content1">
-        <h3 class="font-white normal-font">Content 1</h3>
-      </div>
-      <div id="content2" class="content2">
-        <h3 class="font-white normal-font">Content 2</h3>
-      </div>
-      <div id="content3" class="content3">
-        <h3 class="font-white normal-font">Content 3</h3>
-      </div>
-      <footer class="">
-        <h3 class="font-white normal-font">Footer</h3>
-      </footer>
-    </div>
-
-
-  </body>
+    </body>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
   <script src="js/script.js"></script>
   <script src="js/pageController.js"></script>
+  <script src="https://kit.fontawesome.com/971b5e71ef.js" crossorigin="anonymous"></script>
 </html>
