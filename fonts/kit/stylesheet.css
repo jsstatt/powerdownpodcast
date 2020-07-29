@@ -55,9 +55,12 @@ body::-webkit-scrollbar-thumb {
   background: #34c9eb;
 }
 
+
+
 main {
   margin-left: 5rem;
   padding: 1rem;
+  transition: var(--transition-speed);
 }
 
 main p {
@@ -150,7 +153,7 @@ main p {
   color: var(--text-primary);
   text-decoration: none;
   filter: grayscale(100%) opacity(0.7);
-  transition: var(--transition-speed)
+  transition: var(--transition-speed);
 }
 
 .nav-link:hover {
@@ -178,12 +181,40 @@ main p {
 .sidebar {
   position: fixed;
   top: 0;
-  right: 0;
+  right: -220px;
   width: 220px;
   height: 100vh;
   color: white;
   background-color: var(--bg-primary);
+  transition: var(--transition-speed);
 }
+
+.sidebar-button {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 100vh;
+  color: white;
+  background-color: var(--bg-secondary);
+  transition: var(--transition-speed);
+}
+
+.sidebar-button i{
+  position:absolute;
+    top:50%;
+    left:40%;
+    color: var(--icon);
+}
+
+.sidebar:hover{
+  right: 0;
+}
+
+.sidebar:hover .sidebar-button{
+  right: 220px;
+}
+
 
 .sidebar-nav {
     list-style-type: none;
@@ -255,6 +286,7 @@ input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   text-decoration:none
 }
 
+
 /* small screen */
 @media only screen and (max-width: 1000px) {
   .navbar {
@@ -301,9 +333,11 @@ input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
     display: inline;
   }
 
+
+
   .page {
     padding: 50px;
-    padding-right: 250px;
+    padding-right: 50px;
   }
 
 }
