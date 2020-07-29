@@ -25,15 +25,15 @@
           </li>
           <li class="nav-item" onclick="openTab(event, 'language')"><a class="nav-link btn">
             <i class="fas fa-language"></i>
-            <span class="link-text"><h1 class="normal">language</h1><h1 class="yozah">gEty</h1></span></a>
+            <span class="link-text"><h1 class="normal">Grammar</h1><h1 class="yozah">gEty</h1></span></a>
           </li>
-          <li class="nav-item" onclick="openTab(event, 'culture)"><a class="nav-link btn">
+          <li class="nav-item" onclick="openTab(event, 'lexicon')"><a class="nav-link btn">
+            <i class="far fa-list-alt"></i>
+            <span class="link-text"><h1 class="normal">Lexicon</h1><h1 class="yozah">iNp</h1></span></a>
+          </li>
+          <li class="nav-item" onclick="openTab(event, 'culture')"><a class="nav-link btn">
             <i class="fas fa-atlas"></i>
             <span class="link-text"><h1 class="normal">Culture</h1><h1 class="yozah">MfZ</h1></span></a>
-          </li>
-          <li class="nav-item" onclick="openTab(event, 'info')"><a class="nav-link btn">
-            <i class="fas fa-info-circle"></i>
-            <span class="link-text"><h1 class="normal">info</h1><h1 class="yozah">iNp</h1></span></a>
           </li>
           <li class="nav-item" ><a class="nav-link btn">
             <i class="fas fa-lightbulb"></i>
@@ -43,256 +43,1905 @@
       </nav>
       <main>
         <div id="home" class="page tabcontent">
-          <p>Home</p>
+          <div class="img-holder">
+            <img class="image" src="img\Yozah-Poster.jpg" border="0" alt="Home">
+          </div>
         </div>
         <div id="writer" class="page tabcontent">
-          <p>writer</p>
-            <div class="button-container outline">
-              <div class="">
+          <table class="tables">
+            <tbody>
+              <tr>
+                <td width="719">
+                  <h1 id="Writer" class="normal"><strong>Writer</strong></h1>
+                  <hr>
+                </td>
+              </tr>
+              <tr>
+                <td width="719">
+                  <input type="text" placeholder="Type or use sidebar to make text" ng-value="str">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="sidebar">
+            <ul class="sidebar-nav">
+              <li class="sidebar-item">
                 <a class="btn yozah" ng-click="addToString(1);">1</a>
                 <a class="btn yozah" ng-click="addToString(2);">2</a>
                 <a class="btn yozah" ng-click="addToString(3);">3</a>
                 <a class="btn yozah" ng-click="addToString(4);">4</a>
-              </div>
-              <div class="">
+              </li>
+              <li class="sidebar-item">
                 <a class="btn yozah" ng-click="addToString(5);">5</a>
-              </div>
-              <div class="">
+                <a class="btn yozah" ng-click="addToString('!');">!</a>
+              </li>
+              <li class="sidebar-item">
                 <a class="btn yozah" ng-click="addToString(6);">6</a>
                 <a class="btn yozah" ng-click="addToString(9);">9</a>
                 <a class="btn yozah" ng-click="addToString(7);">7</a>
                 <a class="btn yozah" ng-click="addToString('.');">.</a>
-              </div>
-              <div class="">
+              </li>
+              <li class="sidebar-item">
                 <a class="btn yozah" ng-click="addToString(8);">8</a>
                 <a class="btn yozah" ng-click="addToString(',');">,</a>
                 <a class="btn yozah" ng-click="addToString('_');">_</a>
                 <a class="btn yozah" ng-click="addToString('\u201D');">&#8221;</a>
-              </div>
-              <div class="">
+              </li>
+              <li class="sidebar-item">
                 <a class="btn yozah" ng-click="addToString('0');">0</a>
                 <a class="btn yozah" ng-click="addToString('@');">@</a>
                 <a class="btn yozah" ng-click="addToString('*');">*</a>
                 <a class="btn yozah" ng-click="addToString('#');">#</a>
-              </div>
-              <div class="">
-                  <a class="btn yozah" ng-click="addToString('$');">$</a>
-                  <a class="btn yozah" ng-click="addToString('+');">+</a>
-                  <a class="btn yozah" ng-click="addToString('<');"><</a>
-                  <a class="btn yozah" ng-click="addToString(']');">]</a>
-              </div>
-              <div class="">
-                  <a class="btn yozah" ng-click="addToString('Ā');">Ā</a>
-                  <a class="btn yozah" ng-click="addToString('ą');">ą</a>
-              </div>
-              <div class="">
-                <a class="btn yozah" ng-click="addToString('!');">!</a>
+              </li>
+              <li class="sidebar-item">
+                <a class="btn yozah" ng-click="addToString('$');">$</a>
+                <a class="btn yozah" ng-click="addToString('+');">+</a>
+                <a class="btn yozah" ng-click="addToString('<');"><</a>
+                <a class="btn yozah" ng-click="addToString(']');">]</a>
+              </li>
+              <li class="sidebar-item">
+                <a class="btn yozah" ng-click="addToString('Ā');">Ā</a>
+                <a class="btn yozah" ng-click="addToString('ą');">ą</a>
+              </li>
+              <li class="sidebar-item">
                 <a class="btn yozah" ng-click="addToString('}');">}</a>
                 <a class="btn yozah" ng-click="backSpace();">~</a>
-
-              </div>
-            </div>
-            <div class="">
-              <h1 class="output yozah">{{str}}</h1>
-            </div>
+              </li>
+            </ul>
           </div>
+        </div>
         <div id="language" class="page tabcontent">
-          <table class="tables">
+          <div class="table-container">
+              <h1 id="phonology"><strong>Phonology</strong></h1>
+              <hr>
+              <!--phonetics-->
+              <table width="732" class="tables" id="phonetics">
+              	<tbody>
+              		<tr>
+              			<td width="312" class="subtable">
+              				<p><strong>Consonants:</strong></p>
+              			</td>
+              			<td width="420" class="subtable">
+              				<p><strong>Vowels:</strong></p>
+              			</td>
+              		</tr>
+              		<tr>
+                    <td width="312" class="subtable-light">
+                      <p><span class="yozah">7</span>/ <span class="yozah">  .</span><em> M</em> - /m/ - [m/mʲ]</p></span>
+                      <p><span class="yozah">8</span>/ <span class="yozah">  ,</span> <em>T</em> - /t/ - [t/t&rsquo;]</p>
+                      <p><span class="yozah">@</span>/ <span class="yozah">  &lsquo;</span><em>0</em> - /d/ - [d/dʲ]</p>
+                      <p><span class="yozah">$</span> <em>K</em> - /k/</p>
+                      <p><span class="yozah">&rdquo;</span> <em>N - /n/</em></p>
+                      <p><span class="yozah">_</span> <em>Ng</em> - /ŋ/</p>
+                      <p><span class="yozah">Ā</span> <em>S </em>- /s/</p>
+                      <p><span class="yozah">ą</span> <em> R </em>- /ɾ/</p>
+                      <p><span class="yozah">6</span>/ <span class="yozah">  9</span><em>P </em>- /p/ - [p/pʲ]</p>
+                      <p><span class="yozah">#</span>/ <span class="yozah">  *</span><em> B</em> - /b/ - [b/bʲ]</p>
+                      <p><span class="yozah">&lt;</span> <em> Ch</em> - /t͡ɕ/</p>
+                      <p><span class="yozah">+</span> <em>Zh</em> - /z/</p>
+                      <p><span class="yozah">]</span> <em> Sha</em> - /ʂ/</p>
+                    </td>
+                    <td width="420" class="subtable-light">
+                      <p><em>Article vowels:</em></p>
+                      <p><span class="yozah">a</span><em> Ya</em> - /ja/</p>
+                      <p><span class="yozah">A</span><em> Ye</em> - /ji/</p>
+                      <p><span class="yozah">b</span><em> Yo</em> - /jo/</p>
+                      <p><span class="yozah">B</span><em> Yo - </em>/ju/&nbsp;&nbsp;</p>
+                      <p>&nbsp;</p>
+                      <p><em>Normal vowels:</em></p>
+                      <p><span class="yozah">3</span> <em>A</em>- /a/</p>
+                      <p><span class="yozah">1</span><em> E</em> - /i/</p>
+                      <p><span class="yozah">4</span> <em>O </em>- /o/</p>
+                      <p><span class="yozah">2</span><em> U</em> - /u/</p>
+                      <p>&nbsp;</p>
+                    </td>
+              		</tr>
+              		<tr>
+              			<td colspan="2" width="732" class="subtable">
+              				<p><strong>Phonetics variation:</strong></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td colspan="2" width="732" class="subtable-light">
+              				<p>Within the VCV structure the non-fricative consonants usually become palatalized. Outside of this structure they will often fall more towards a standard pronunciation.</p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td colspan="2" width="732" class="subtable">
+              				<p><strong>Syllable structure:</strong></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td colspan="2" width="732" class="subtable-light">
+              				<p>Nouns most commonly use CVCVC structure while verbs mostly use VCVC. Article vowels are mostly only seen in articles however both phonemes can exist next to each other in other words. Nouns can only end with a vowel. The minimal structure that is allowed is CV for articles, CV for nouns and VC for verb.&nbsp; Consonant cluster cannot exceed 2 phonemes without requiring a vowel in between.</p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td colspan="2" width="732" class="subtable">
+              				<p><strong>Suprasegmental Features:</strong></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td colspan="2" width="732" class="subtable-light">
+              				<p>Tone: Questions are formed using falling tone while statements are made with a medium tone. Aggression can often be expressed with low tone while joy can be expressed with a higher tone.</p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td colspan="2" width="732" class="subtable-light">
+              				<p>Stress: The stress of a word usually falls on the nucleus of the syllable so in the common VCV the stress is on the C.</p>
+              			</td>
+              		</tr>
+              	</tbody>
+              </table>
+              <!--IPA Table-->
+              <br>
+              <table width="486" class="tables">
+              	<tbody>
+              		<tr>
+              			<td width="98" class="subtable">
+              				<p>&nbsp;</p>
+              			</td>
+              			<td width="66" class="subtable">
+              				<p>Bilabial</p>
+              			</td>
+              			<td width="73" class="subtable">
+              				<p>Labiodental</p>
+              			</td>
+              			<td width="46" class="subtable">
+              				<p>Dental</p>
+              			</td>
+              			<td width="58" class="subtable">
+              				<p>Alveolar</p>
+              			</td>
+              			<td width="38" class="subtable">
+              				<p>velar</p>
+              			</td>
+              			<td width="60" class="subtable">
+              				<p>Retroflex</p>
+              			</td>
+              			<td width="47" class="subtable">
+              				<p>Palatal</p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td width="98" class="subtable">
+              				<p>Plosive</p>
+              			</td>
+              			<td width="66" class="subtable-light">
+              				<p>p&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b</p>
+              			</td>
+              			<td width="73" class="subtable-light">
+              				<p>&nbsp;</p>
+              			</td>
+              			<td width="46" class="subtable-light">
+              				<p>&nbsp;</p>
+              			</td>
+              			<td width="58" class="subtable-light">
+              				<p>t&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; d</p>
+              			</td>
+              			<td width="38" class="subtable-light">
+              				<p>K</p>
+              			</td>
+              			<td width="60" class="subtable-light">
+              				<p>&nbsp;</p>
+              			</td>
+              			<td width="47" class="subtable-light">
+              				<p>&nbsp;</p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td width="98" class="subtable">
+              				<p>Nasal</p>
+              			</td>
+              			<td width="66" class="subtable-light">
+              				<p>m</p>
+              			</td>
+              			<td width="73" class="subtable-light">
+              				<p>&nbsp;</p>
+              			</td>
+              			<td width="46" class="subtable-light">
+              				<p>&nbsp;</p>
+              			</td>
+              			<td width="58" class="subtable-light">
+              				<p>n</p>
+              			</td>
+              			<td width="38" class="subtable-light">
+              				<p>ŋ</p>
+              			</td>
+              			<td width="60" class="subtable-light">
+              				<p>&nbsp;</p>
+              			</td>
+              			<td width="47" class="subtable-light">
+              				<p>&nbsp;</p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td width="98" class="subtable">
+              				<p>Trill</p>
+              			</td>
+              			<td width="66" class="subtable-light">
+              				<p>&nbsp;</p>
+              			</td>
+              			<td width="73" class="subtable-light">
+              				<p>&nbsp;</p>
+              			</td>
+              			<td width="46" class="subtable-light">
+              				<p>&nbsp;</p>
+              			</td>
+              			<td width="58" class="subtable-light">
+              				<p>&nbsp;</p>
+              			</td>
+              			<td width="38" class="subtable-light">
+              				<p>&nbsp;</p>
+              			</td>
+              			<td width="60" class="subtable-light">
+              				<p>&nbsp;</p>
+              			</td>
+              			<td width="47" class="subtable-light">
+              				<p>&nbsp;</p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td width="98" class="subtable">
+              				<p>Tap or flap</p>
+              			</td>
+              			<td width="66" class="subtable-light">
+              				<p>&nbsp;</p>
+              			</td>
+              			<td width="73" class="subtable-light">
+              				<p>&nbsp;</p>
+              			</td>
+              			<td width="46" class="subtable-light">
+              				<p>&nbsp;</p>
+              			</td>
+              			<td width="58" class="subtable-light">
+              				<p>ɾ</p>
+              			</td>
+              			<td width="38" class="subtable-light">
+              				<p>&nbsp;</p>
+              			</td>
+              			<td width="60" class="subtable-light">
+              				<p>&nbsp;</p>
+              			</td>
+              			<td width="47" class="subtable-light">
+              				<p>&nbsp;</p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td width="98" class="subtable">
+              				<p>Fricative</p>
+              			</td>
+              			<td width="66" class="subtable-light">
+              				<p>&nbsp;</p>
+              			</td>
+              			<td width="73" class="subtable-light">
+              				<p>&nbsp;</p>
+              			</td>
+              			<td width="46" class="subtable-light">
+              				<p>&nbsp;</p>
+              			</td>
+              			<td width="58" class="subtable-light">
+              				<p>s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; z</p>
+              			</td>
+              			<td width="38" class="subtable-light">
+              				<p>&nbsp;</p>
+              			</td>
+              			<td width="60" class="subtable-light">
+              				<p>ʂ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;ʐ</p>
+              			</td>
+              			<td width="47" class="subtable-light">
+              				<p>&nbsp;</p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td width="98" class="subtable">
+              				<p>Affricates</p>
+              			</td>
+              			<td width="66" class="subtable-light">
+              				<p>&nbsp;</p>
+              			</td>
+              			<td width="73" class="subtable-light">
+              				<p>&nbsp;</p>
+              			</td>
+              			<td width="46" class="subtable-light">
+              				<p>&nbsp;</p>
+              			</td>
+              			<td width="58" class="subtable-light">
+              				<p>d͡ʒ</p>
+              			</td>
+              			<td width="38" class="subtable-light">
+              				<p>&nbsp;</p>
+              			</td>
+              			<td width="60" class="subtable-light">
+              				<p>&nbsp;</p>
+              			</td>
+              			<td width="47" class="subtable-light">
+              				<p>&nbsp;</p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td width="98" class="subtable">
+              				<p>Approximant</p>
+              			</td>
+              			<td width="66" class="subtable-light">
+              				<p>&nbsp;</p>
+              			</td>
+              			<td width="73" class="subtable-light">
+              				<p>&nbsp;</p>
+              			</td>
+              			<td width="46" class="subtable-light">
+              				<p>&nbsp;</p>
+              			</td>
+              			<td width="58" class="subtable-light">
+              				<p>&nbsp;</p>
+              			</td>
+              			<td width="38" class="subtable-light">
+              				<p>&nbsp;</p>
+              			</td>
+              			<td width="60" class="subtable-light">
+              				<p>&nbsp;</p>
+              			</td>
+              			<td width="47" class="subtable-light">
+              				<p>j</p>
+              			</td>
+              		</tr>
+              	</tbody>
+              </table>
+              <br>
+            j
+              <!--Pronouns-->
+              <table width="732" class="tables" id="pronouns">
+              	<tbody>
+              		<tr>
+              			<td colspan="4" width="732" class="subtable">
+              				<p><strong>Pronouns:</strong></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td colspan="4" width="732" class="subtable-light">
+              				<p>Unless a pronoun is used on its own, it will always be
+                        affixed to the verb. The subject pronoun is attached as
+                        a prefix while the object and indirect object pronoun is
+                        attached as a suffix. The vowel <em>a</em> bust be added
+                        after the nominative pronoun if its combination with the
+                        beginning of a verb creates a consonant cluster larger
+                        than 2. The 3rd person AI pronoun is used to refer to
+                        any artificial intelligence.</p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td width="129" class="subtable">
+              				<p><em>Stand alone:</em></p>
+              			</td>
+              			<td width="135" class="subtable">
+              				<p><em>Nominative:</em></p>
+              			</td>
+              			<td width="162" class="subtable">
+              				<p><em>Accusative:</em></p>
+              			</td>
+              			<td width="306" class="subtable">
+              				<p><em>Dative:</em></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td width="129" class="subtable-light">
+              				<p><em>Ka- </em>You (familiar)</p>
+              				<p><em>Zha &ndash; </em>You (Polite)</p>
+              				<p><em>Pa &ndash; </em>Me</p>
+              				<p><em>Nga &ndash; </em>He</p>
+              				<p><em>Ma </em>&ndash; She</p>
+              				<p><em>Ta &ndash; </em>Ze</p>
+                      <p><em>Sa &ndash; </em>3rd person AI</p>
+              				<p><em>Cha &ndash; </em>We</p>
+              				<p><em>Da &ndash; </em>They</p>
+              				<p><em>Ata &ndash; </em>Who</p>
+              			</td>
+              			<td width="135" class="subtable-light">
+              				<p><em>K- </em>You (familiar)</p>
+              				<p><em>Zh &ndash; </em>You (Polite)</p>
+              				<p><em>P &ndash; </em>I</p>
+              				<p><em>Ng &ndash; </em>He</p>
+              				<p><em>M &ndash; </em>She</p>
+              				<p><em>T &ndash; </em>Ze</p>
+                      <p><em>S &ndash; </em>3rd person AI</p>
+              				<p><em>Ch &ndash;</em> We</p>
+              				<p><em>D &ndash; </em>They</p>
+              				<p><em>At - Whom</em></p>
+              			</td>
+              			<td width="162" class="subtable-light">
+              				<p><em>Kar- </em>You (familiar)</p>
+              				<p><em>Zhar &ndash; </em>You (Polite)</p>
+              				<p><em>Par &ndash; </em>Me</p>
+              				<p><em>Ngar &ndash; </em>Him</p>
+              				<p><em>Mar &ndash; </em>Her</p>
+              				<p><em>Tar &ndash; </em>Hir</p>
+                      <p><em>Sar &ndash; </em>3rd person AI</p>
+              				<p><em>Char &ndash; </em>Us</p>
+              				<p><em>Dar &ndash; </em>Them</p>
+              				<p><em>Atar &shy;&shy;&ndash; </em>Who</p>
+              			</td>
+              			<td width="306" class="subtable-light">
+              				<p><em>Kor- </em>You (familiar)</p>
+              				<p><em>Zhor &ndash; </em>You (Polite)</p>
+              				<p><em>Por &ndash; </em>Me</p>
+              				<p><em>Ngor &ndash; </em>Him</p>
+              				<p><em>Mor &ndash; H</em>er</p>
+              				<p><em>Tor &ndash; </em>Hir</p>
+                      <p><em>Sor &ndash; </em>3rd person AI</p>
+              				<p><em>Chor &ndash; </em>Us</p>
+              				<p><em>Dor &ndash; </em>Them</p>
+              				<p><em>Ator -</em> who</p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td colspan="4" width="732" class="subtable">
+              				<p><em>Examples:</em></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td width="129" class="subtable-light">
+              				<p>Ka &ndash; You (referred to singularly without anything else)</p>
+              			</td>
+              			<td width="135" class="subtable-light">
+              				<p>I eat</p>
+              				<p><em>p</em>-(eat)</p>
+              				<p><em>p- oju</em></p>
+              				<p><em>poju</em></p>
+              			</td>
+              			<td width="162" class="subtable-light">
+              				<p>I see you</p>
+              				<p><em>p</em>-(see)-<em>kar</em></p>
+              				<p><em>p-up<sup>j</sup>ar-kar</em></p>
+              				<p><em>pup<sup>j</sup>arkar</em></p>
+              			</td>
+              			<td width="306" class="subtable-light">
+              				<p>I give you bread</p>
+              				<p><em>p</em>-(give)-<em>kor </em>(bread)</p>
+              				<p><em>p-zhak-kor </em>(bread)</p>
+              				<p><em>pzhakor </em>(bread)</p>
+              			</td>
+              		</tr>
+              	</tbody>
+              </table>
+              <br>
+              <!--Noun Classes-->
+              <table width="732" class="tables" id="nounclass">
+              	<tbody>
+              		<tr>
+              			<td colspan="5" width="732" class="subtable">
+              				<p><strong>Noun Classes, Definite and Indefinite Articles:</strong></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td colspan="5" width="732" class="subtable-light">
+              				<p>Noun cases are broken up into two categories. The first category is natural. This is any living thing or something that is naturally occurring. The second category is non-natural which is something man-made or otherwise created and not naturally occurring. Articles are either definite or indefinite but must match the noun class of the noun that follows. The natural noun class uses front vowels while the non-natural class uses back vowels. You can only match front vowel articles with nouns that end with front vowels and back vowel articles with nouns that end with back vowels. An article is always needed before a noun</p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td colspan="2" width="282" class="subtable">
+              				<p><em>Natural:</em></p>
+              			</td>
+              			<td colspan="3" width="450" class="subtable">
+              				<p><em>Non-Natural:</em></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td colspan="2" width="282" class="subtable-light">
+              				<p><em>Ya</em> &ndash; Natural definite article</p>
+              				<p><em>Ye </em>&ndash; Natural indefinite article</p>
+              			</td>
+              			<td colspan="3" width="450" class="subtable-light">
+              				<p><em>Yo </em>&ndash; Non-natural definite article</p>
+              				<p><em>Yu</em> &ndash; Non-natural indefinite article</p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td colspan="5" width="732" class="subtable">
+              				<p><em>Example:</em></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td colspan="2" width="282" class="subtable-light">
+              				<p><em>bobache</em> &ndash; water</p>
+              				<p><em>Ya bobache</em> &ndash; the water/that water/this water</p>
+              				<p><em>Ye bobache</em> &ndash; a water</p>
+              			</td>
+              			<td colspan="3" width="450" class="subtable-light">
+              				<p><em>sosu</em> &ndash; sword</p>
+              				<p><em>Yo sosu</em> &ndash; the sword/that sword/this sword</p>
+              				<p><em>Yu sosu</em> &ndash; a sword</p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td colspan="5" width="732" class="subtable">
+              				<p><strong>Plural and Quantity:</strong></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td colspan="5" width="732" class="subtable-light">
+              				<p>Plural and quantity is marked at the end of the article before the noun. The article will determine if it is definite or indefinite and its ending will determine the amount or quantity of the noun that follows.</p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td colspan="2" width="282" class="subtable">
+              				<p><em>Plural:</em></p>
+              			</td>
+              			<td colspan="3" width="450" class="subtable">
+              				<p><em>Numbers:</em></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td colspan="2" width="282" class="subtable-light">
+              				<p><em>k</em> &ndash; plural</p>
+              			</td>
+              			<td colspan="2" rowspan="3" width="172" class="subtable-light">
+              				<p><em>jo</em> &ndash; one&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+              				<p><em>t&rsquo;o</em> &ndash; two</p>
+              				<p><em>d<sup>j</sup>o </em>&ndash; three</p>
+              				<p><em>cho</em> &ndash; four</p>
+              				<p><em>zho</em> - five&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+              				<p><em>zhok</em> &ndash; six</p>
+              			</td>
+              			<td rowspan="3" width="278" class="subtable-light">
+              				<p><em>bjo</em> &ndash; seven</p>
+              				<p><em>rok</em> &ndash; eight</p>
+              				<p><em>so</em> - nine</p>
+              				<p><em>jok</em> &ndash; ten</p>
+              				<p>&nbsp;</p>
+              				<p>&nbsp;</p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td colspan="2" width="282" class="subtable">
+              				<p><em>Quantity:</em></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td colspan="2" width="282" class="subtable-light">
+              				<p><em>Sok </em>&ndash; several</p>
+              				<p><em>Som </em>- few</p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td colspan="5" width="732" class="subtable">
+              				<p><em>Examples:</em></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td width="228" class="subtable-light">
+              				<p><em>Yak</em> &ndash; Natural plural definite</p>
+              				<p><em>Yuk</em> &ndash; Non-natural plural indefinite</p>
+              				<p><em>Yecho </em>&ndash; Natural four indefinite</p>
+              				<p><em>Yojok </em>&ndash; Non-natural ten definite</p>
+              				<p><em>Yasom </em>&ndash; Natural some definite</p>
+              			</td>
+              			<td colspan="2" width="180" class="subtable-light">
+              				<p><em>ruse</em> &ndash; fruit</p>
+              				<p><em>Yak ruse</em> &ndash; the fruits</p>
+              				<p><em>Yek ruse</em> &ndash; a fruits*</p>
+              				<p><em>Yajo ruse</em> &ndash; the one fruit</p>
+              				<p><em>Yezho ruse</em> &ndash; a ten fruits*</p>
+              			</td>
+              			<td colspan="2" width="324" class="subtable-light">
+              				<p><em>rub<sup>j</sup>abu</em> - house</p>
+              				<p><em>Yok rub<sup>j</sup>abu</em> &ndash; the house</p>
+              				<p><em>Yuk rub<sup>j</sup>abu</em> &ndash; a house</p>
+              				<p><em>Yod<sup>j</sup>o rub<sup>j</sup>abu</em> &ndash; the three houses</p>
+              				<p><em>Yusom rub<sup>j</sup>abu</em> &ndash; a few houses</p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td width="228">&nbsp;</td>
+              			<td width="54">&nbsp;</td>
+              			<td width="126">&nbsp;</td>
+              			<td width="46">&nbsp;</td>
+              			<td width="278">&nbsp;</td>
+              		</tr>
+              	</tbody>
+              </table>
+              <br>
+              <!--Grammatical Cases-->
+              <table width="732" class="tables" id="grammar">
+              	<tbody>
+              		<tr>
+              			<td width="732" class="subtable">
+              				<p><strong>Grammatical Cases:</strong></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td width="732" class="subtable-light">
+              				<p>Yozah follows a rigid word order for different tenses. Grammatical cases are used in order to specify the word&rsquo;s grammatical function.</p>
+              			</td>
+              		</tr>
+              	</tbody>
+              </table>
+              <br>
+              <!--Nominative Case-->
+              <table width="732" class="tables" id="nominative">
+              	<tbody>
+              		<tr>
+              			<td colspan="5" width="732" class="subtable">
+              				<p><strong>Nominative Nouns:</strong></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td colspan="5" width="732" class="subtable-light">
+              				<p>The nominative case indicates that the word is the subject of the sentence. A noun can be identified as being in the nominative case if it does not have any added affixes.</p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td colspan="5" width="732" class="subtable">
+              				<p><em>Examples:</em></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td colspan="2" width="366" class="subtable-light">
+              				<p>The teacher eats</p>
+              				<p><em>Ojuyer &ndash; </em>to eat</p>
+              				<p>Yo <em>shaubʲeɾu oju</em></p>
+              				<p>&nbsp;</p>
+              				<p>The dogs drink</p>
+              				<p><em>achyur &ndash; </em>to drink</p>
+              				<p><em>Yak pezha ach</em></p>
+              			</td>
+              			<td colspan="3" width="366" class="subtable-light">
+              				<p>The student sleeps</p>
+              				<p><em>Osopyer </em>&ndash; to sleep</p>
+              				<p><em>Yu chaubʲeɾu osop</em></p>
+              				<p><em>&nbsp;</em></p>
+              				<p>The rabbit plays</p>
+              				<p><em>Umazakyur &ndash; </em>to play</p>
+              				<p><em>Ya otasha Umazak</em></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td colspan="5" width="732" class="subtable">
+              				<p><strong>Nominative Verbs:</strong></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td colspan="5" width="732" class="subtable-light">
+              				<p>Words that end in <em>yur &shy;</em>or <em>yer </em>are verbs. This ending on verbs indicate that the verb is in its &ldquo;to&rdquo; form [<em>up<sup>j</sup>aryur </em>= to see]. Verbs only mark grammatical case when a pronoun is attached. If a pronoun is used as the subject of the verb, that pronoun must be attached to the front as a prefix. Additionally, the <em>yur</em> or <em>yer </em>must be declined at the end even though there are not suffixes for this case. Other grammatical cases will use suffixes so make sure to decline the ending.</p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td colspan="5" width="732" class="subtable">
+              				<p><em>Examples:</em></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td width="186" class="subtable-light">
+              				<p><em>umat&rsquo;yer &ndash; </em>to hear</p>
+              				<p>p-umat &ndash; I hear</p>
+              			</td>
+              			<td colspan="2" width="192" class="subtable-light">
+              				<p><em>Om<sup>j</sup>ubyer &ndash; </em>to want</p>
+              				<p><em>k-om<sup>j</sup>ub &ndash; </em>you want</p>
+              			</td>
+              			<td width="174" class="subtable-light">
+              				<p><em>Osopyer &ndash; </em>to sleep</p>
+              				<p><em>Ch-osop &ndash; </em>we sleep</p>
+              			</td>
+              			<td width="180" class="subtable-light">
+              				<p><em>Arosyur &ndash; </em>to love</p>
+              				<p><em>Ng-aros &ndash; </em>he loves</p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td width="186">&nbsp;</td>
+              			<td width="180">&nbsp;</td>
+              			<td width="12">&nbsp;</td>
+              			<td width="174">&nbsp;</td>
+              			<td width="180">&nbsp;</td>
+              		</tr>
+              	</tbody>
+              </table>
+              <br>
+              <!--Accusative Case-->
+              <table width="732" class="tables" id="accusative">
+              	<tbody>
+              		<tr>
+              			<td colspan="5" width="732" class="subtable">
+              				<p><strong>Accusative Nouns:</strong></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td colspan="5" width="732" class="subtable-light">
+              				<p>The accusative case indicates the direct object of the verb. To indicate that a noun is the direct object of the sentence, the affix <em>-r </em>will be attached to the end of the word. &nbsp;</p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td colspan="5" width="732" class="subtable">
+              				<p><em>Examples:</em></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td width="156" class="subtable-light">
+              				<p><em>Oseto &ndash; bed</em></p>
+              				<p>I sleep in a bed</p>
+              				<p><em>Yo oseto-r p-osop</em></p>
+              			</td>
+              			<td width="156" class="subtable-light">
+              				<p><em>Pusho &ndash; </em>pen</p>
+              				<p>he wants a pen</p>
+              				<p><em>ng-om<sup>j</sup>ub yu pusho-r</em></p>
+              			</td>
+              			<td colspan="2" width="150" class="subtable-light">
+              				<p><em>Kesha &ndash; </em>cat</p>
+              				<p>we love cats</p>
+              				<p><em>ch-aros yek kesha-r</em></p>
+              			</td>
+              			<td width="270" class="subtable-light">
+              				<p><em>Muzhoko &ndash; </em>music</p>
+              				<p>She hears to music</p>
+              				<p><em>m-umat Yu muzhoko-r</em></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td colspan="5" width="732" class="subtable">
+              				<p><strong>Accusative Verbs</strong><strong>:</strong></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td colspan="5" width="732" class="subtable-light">
+              				<p>Verbs will only show accusative case agreement if there is a pronoun attached to the verb as a direct object. As seen in the <a href="#Pronoun">pronoun list</a>, the pronoun is attached using the suffix <em>-ar</em> to indicate that the pronoun is referred to as the object of the sentence.&nbsp;&nbsp;&nbsp;</p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td colspan="5" width="732" class="subtable">
+              				<p><em>Examples:</em></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td width="156" class="subtable-light">
+              				<p><em>Uchotyur &ndash; </em>to ask</p>
+              				<p>She asks him</p>
+              				<p><em>m-uchot-ngar</em></p>
+              			</td>
+              			<td width="156" class="subtable-light">
+              				<p><em>Umchatyur &ndash; </em>to answer</p>
+              				<p>They answer us</p>
+              				<p><em>d-umchat-char</em></p>
+              			</td>
+              			<td width="144" class="subtable-light">
+              				<p><em>Upamrosyur &ndash; </em>to like</p>
+              				<p>You (p) like me</p>
+              				<p><em>Zh-upampros-par</em></p>
+              			</td>
+              			<td colspan="2" width="276" class="subtable-light">
+              				<p><em>Chashamrosyur &ndash; </em>to hate</p>
+              				<p>I hate you</p>
+              				<p><em>p-chashamros-kar </em></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td width="156">&nbsp;</td>
+              			<td width="156">&nbsp;</td>
+              			<td width="144">&nbsp;</td>
+              			<td width="6">&nbsp;</td>
+              			<td width="270">&nbsp;</td>
+              		</tr>
+              	</tbody>
+              </table>
+              <br>
+              <!--Dative Case-->
+              <table width="732" class="tables" id="dative">
+              	<tbody>
+              		<tr>
+              			<td colspan="3" width="732" class="subtable">
+              				<p><strong>Dative Nouns:</strong></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td colspan="3" width="732" class="subtable-light">
+              				<p>Dative is the case that marks the indirect object of a sentence. To indicate that a noun is the indirect object of a sentence, the affix <em>-r</em> is attached to the ending of the noun. Since that accusative form uses the same ending the noun must always be placed before the direct object.</p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td colspan="3" width="732" class="subtable">
+              				<p><em>Examples:</em></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td width="192" class="subtable-light">
+              				<p><em>Rejepu &ndash; </em>letter</p>
+              				<p><em>Shotamyer &ndash; to send</em></p>
+              				<p>I send you a letter</p>
+              				<p><em>p-shotam-kor yu rejepur</em></p>
+              			</td>
+              			<td width="210" class="subtable-light">
+              				<p><em>Jutobu &ndash; </em>story</p>
+              				<p><em>zhapatamyer &ndash; </em>to tell</p>
+              				<p>she tells me a story</p>
+              				<p><em>m-zhapatam-por yu jutobur</em></p>
+              			</td>
+              			<td width="330" class="subtable-light">
+              				<p><em>Sum<sup>j</sup>osu &ndash; </em>gift</p>
+              				<p><em>Ubuchyer &ndash; </em>to buy</p>
+              				<p>We buy the dog a gift</p>
+              				<p><em>Ch-ubuch ya pezhar yu sum<sup>j</sup>osur</em></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td colspan="3" width="732" class="subtable">
+              				<p><strong>Dative Verbs:</strong></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td colspan="3" width="732" class="subtable-light">
+              				<p>Verbs will only show dative case agreement if there is a pronoun attached to the verb as an indirect object. As seen above in the <a href="#Pronoun">pronoun list</a>, the pronoun is attached using the suffix -or to indicate that the pronoun is referred to as the object of the sentence.&nbsp;&nbsp;&nbsp;</p>
+              			</td>
+              		</tr>
+              	</tbody>
+              </table>
+              <br>
+              <!--Genitive Case-->
+              <table width="732" class="tables" id="genitive">
+              	<tbody>
+              		<tr>
+              			<td colspan="3" width="732" class="subtable">
+              				<p><strong>Genitive Case:</strong></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td colspan="3" width="732" class="subtable-light">
+              				<p>Genitive case marks ownership, if a person is the possessor their pronoun can be placed at the front of the article as a prefix to show who the noun that comes after belongs to. If a noun is the possessor a preposition-like verb is used. <a href="#Prepositions">See Prepositions</a></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td colspan="3" width="732" class="subtable">
+              				<p><em>Examples:</em></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td width="108" class="subtable-light">
+              				<p><em>D<sup>j</sup>uzu &ndash; </em>money</p>
+              				<p>My money</p>
+              				<p><em>p-yu d<sup>j</sup>uzu</em></p>
+              			</td>
+              			<td width="186" class="subtable-light">
+              				<p>he gives her his letter</p>
+              				<p><em>ng-zhak-mor ng-yu-rejepur</em></p>
+              				<p><em>ngzhakmor ngyu rejepur</em></p>
+              			</td>
+              			<td width="438" class="subtable-light">
+              				<p>my dog sends you cat a gift</p>
+              				<p><em>p-ya</em> <em>pezha shotam k-ya kesha-r </em>yu sum<sup>j</sup>osu-r</p>
+              				<p><em>pya prezha shotam kya keshar yu sum<sup>j</sup>osur</em></p>
+              			</td>
+              		</tr>
+              	</tbody>
+              </table>
+              <br>
+              <!--Adjectives-->
+              <table width="732" class="tables" id="adjective">
+              	<tbody>
+              		<tr>
+              			<td colspan="4" width="732" class="subtable">
+              				<p><strong>Adjectives:</strong></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td colspan="4" width="732" class="subtable-light">
+              				<p>Adjectives are used to modify the noun by adding more descriptive value. The adjective can be place before the noun that it describes. Adjectives are denotated with the ending -j<em>o</em> however the ending vowel must be changed to match the noun class of the noun that fallows it. The vowel ending will always match the noun class ending not the article class ending. Adjectives can be stacked one after another to create more descriptive meanings.</p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td colspan="4" width="732" class="subtable">
+              				<p><em>Examples:</em></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td width="138" class="subtable-light">
+              				<p><em>Bomjo &ndash; </em>happy</p>
+              				<p>the happy dogs</p>
+              				<p><em>Yak bomja prezha &nbsp;</em></p>
+              			</td>
+              			<td width="168" class="subtable-light">
+              				<p><em>Chashbomjo &ndash; </em>unhappy</p>
+              				<p>the two unhappy cats</p>
+              				<p>Yat&rsquo;o chashbomja <em>kesha</em></p>
+              			</td>
+              			<td width="138" class="subtable-light">
+              				<p><em>Odut&rsquo;jo</em> &ndash; white</p>
+              				<p>*a ten white rabbits</p>
+              				<p>Yejok odut&rsquo;ja otasha</p>
+              			</td>
+              			<td width="288" class="subtable-light">
+              				<p><em>Chashodut&rsquo;jo &ndash; </em>Black</p>
+              				<p>*The several black pen</p>
+              				<p>Yukom chashodut&rsquo;jo pusho</p>
+              			</td>
+              		</tr>
+              	</tbody>
+              </table>
+              <br>
+              <!--Adverbs-->
+              <table class="tables" id="adverb">
+              	<tbody>
+              		<tr>
+              			<td colspan="2" width="719" class="subtable">
+              				<p><strong>Adverb:</strong></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td colspan="2" width="719" class="subtable-light">
+              				<p>Adverbs function to describe the action of a verb. They are created by modifying adjectives to be used with verbs by adding the prefix -du. The adverb always goes before the verb no matter the word order. Just like adjectivse adverbs can be stacked one after another to create more description.</p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td colspan="2" width="719" class="subtable">
+              				<p><em>Examples:</em></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td width="306" class="subtable-light">
+              				<p><em>Rochjo &ndash; </em>quick</p>
+              				<p><em>Rochjodu &ndash; quickly</em></p>
+              				<p>I quickly eat</p>
+              				<p><em>Rochedu p-oju </em></p>
+              			</td>
+              			<td width="414" class="subtable-light">
+              				<p><em>Chashrochjo &ndash; </em>slow</p>
+              				<p><em>Chashrochjodu &ndash; </em>slowly</p>
+              				<p>he slowly drinks</p>
+              				<p><em>Chashrochedu ng-ach</em></p>
+              			</td>
+              		</tr>
+              	</tbody>
+              </table>
+              <br>
+              <!--Verbs of motion-->
+              <table class="tables" id="verbsofmotion">
+              	<tbody>
+              		<tr>
+              			<td colspan="2" width="719" class="subtable">
+              				<p><strong>Verbs of Motions:</strong></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td colspan="2" width="719" class="subtable-light">
+              				<p>Verbs of motion are formed from the base verb <em>dodyer </em>meaning to go<em>. </em>Prefixes can be added in order to modify the verb to create more specific motions.</p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td colspan="2" width="719" class="subtable">
+              				<p><em>Examples:</em></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td width="174" class="subtable-light">
+              				<p><em>Dodyer &ndash; </em>to go</p>
+              				<p><em>Chedodyer &ndash;</em> to go toward</p>
+              				<p>Shadodyer &ndash; to go away</p>
+              				<p>D<sup>j</sup>odod &ndash; to go downward</p>
+              				<p>D<sup>j</sup>adod &ndash; to go upward</p>
+              			</td>
+              			<td width="546" class="subtable-light">
+              				<p><em>P-dod yo mod<sup>j</sup>abur</em> &ndash; I am going home</p>
+              				<p><em>M-chedod ya ngat&rsquo;bar</em> &ndash; she goes toward the desert</p>
+              				<p><em>Ya puda Rochjodu shadod ya Porenar</em> &ndash;The person is going quickly away from the fire</p>
+              				<p><em>Yo t&rsquo;echmatu d<sup>j</sup>odod ya dʲut&rsquo;oser &ndash;</em> The robot is going down the mountain</p>
+              				<p><em>Ya osusora</em> d<sup>j</sup>adod <em>ya dʲut&rsquo;oser &ndash; </em>The snake goes up the mountain</p>
+              			</td>
+              		</tr>
+              	</tbody>
+              </table>
+              <br>
+              <!--Preposition-->
+              <table class="tables" id="preposition">
+              	<tbody>
+              		<tr>
+              			<td colspan="2" width="719" class="subtable">
+              				<p><strong>Prepositions:</strong></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td colspan="2" width="719" class="subtable-light">
+              				<p>Preposition are not independent particles but exist as verbs.</p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td colspan="2" width="719" class="subtable">
+              				<p><em>Examples:</em></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td width="198" class="subtable-light">
+              				<p><em>Romyer &ndash; </em>to be located</p>
+              				<p><em>Karomyer</em> &ndash; to be located in</p>
+              				<p><em>medyer</em>&ndash; to be located above</p>
+              				<p><em>madyer &ndash; </em>to be located below</p>
+              				<p><em>Semyer &ndash; </em>to be with</p>
+              				<p><em>Momyer</em> &ndash; to (be) possessed by</p>
+              				<p>Eyer &ndash; to be</p>
+              			</td>
+              			<td width="522" class="subtable-light">
+              				<p><em>P-rom yu rub<sup>j</sup>abur &ndash; </em>I am located at a house</p>
+              				<p><em>Ya otasha karom yo bujochar &ndash;</em> The rabbit is in the cave</p>
+              				<p><em>Yo d<sup>j</sup>uzu med yo pushor &ndash; </em>The money is located above the table</p>
+              				<p>Ya pezha mad yo pushor &ndash; The dog is located under the table</p>
+              				<p><em>Ng-Sem ya kesha &ndash; </em>He is with the cat</p>
+              				<p><em>Ya puda mom ya bobacher</em> &ndash; The person&rsquo;s water</p>
+              				<p><em>Bomjodu</em> d-e They happy are</p>
+              			</td>
+              		</tr>
+              	</tbody>
+              </table>
+              <br>
+              <!--Negation-->
+              <table class="tables" id="negation">
+              	<tbody>
+              		<tr>
+              			<td colspan="2" width="719" class="subtable">
+              				<p><strong>Negation:</strong></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td colspan="2" width="719" class="subtable-light">
+              				<p>Any adjective can be negated by adding <em>Chash- </em>to the front of the word. <em>Chash- </em>&nbsp;is productive and can add to any verb, adjective or adverbs you want to negate.</p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td colspan="2" width="719" class="subtable">
+              				<p><em>Examples:</em></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td width="360" class="subtable-light">
+              				<p>Dapojo &ndash; attractive</p>
+              				<p>Chashdapojo &ndash; ugly/not attractive</p>
+              				<p>They are ugly</p>
+              				<p><em>Chashdapjo Ng-e </em></p>
+              			</td>
+              			<td width="360" class="subtable-light">
+              				<p><em>Asuzahyer &ndash; to build</em></p>
+              				<p><em>chashasuzahyer &ndash; to not build</em></p>
+              				<p><em>Ze did not build the house</em></p>
+              				<p><em>t-Chashasuzahyer yu rub<sup>j</sup>abur </em></p>
+              			</td>
+              		</tr>
+              	</tbody>
+              </table>
+              <br>
+              <!--Proper Nouns-->
+              <table class="tables" id="propernoun">
+              	<tbody>
+              		<tr>
+              			<td colspan="2" width="719" class="subtable">
+              				<p><strong>Proper Nouns:</strong></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td colspan="2" width="719" class="subtable-light">
+              				<p>Proper nouns can be titles, places, names of businesses clans or factions. They are constructed by affixing the article to the beginning of the noun and removing the class ending. Since proper names are always definite no article is need to describe the noun.</p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td colspan="2" width="719" class="subtable">
+              				<p><em>Examples:</em></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td width="360" class="subtable-light">
+              				<p><em>Yozah &ndash; The Language</em></p>
+              				<p><em>Yo zaha &ndash; the language</em></p>
+              			</td>
+              			<td width="360" class="subtable-light">
+              				<p><em>yabʲuch &ndash; </em>The main culture of Yozah speakers</p>
+              				<p><em>Ya b<sup>j</sup>ucha &ndash; </em>main culture of Yozah speakers</p>
+              			</td>
+              		</tr>
+              	</tbody>
+              </table>
+              <br>
+              <h1 id="syntax"><strong>Syntax</strong></h1>
+              <hr>
+              <!--Word Order-->
+              <table class="tables" id="wordorder">
+              	<tbody>
+              		<tr>
+              			<td colspan="2" width="719" class="subtable">
+              				<p><strong>Word Order, Tense, and Aspect:</strong></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td colspan="2" width="719" class="subtable-light">
+              				<p>Tense in Yozah changes with word order. Present tense, like you have seen earlier, is constructed in subject object verb order or SVO. Past tense uses the word order SOV and future tense uses the word order VSO. The easy way to remember this is that when talking about the past everything goes before the verb and when talking about the future everything goes after the verb. Remember that the indirect object always goes before the direct object in any tense.&nbsp;</p>
+              				<p>Yozah also uses imperfect and perfect aspects to describe ongoing habitual activities and completed actions. Along with the word order the particle <em>uj </em>is added before the verb to indicate if the action is perfect. No particle is needed to indicate that an action is imperfect.</p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td width="378" class="subtable">
+              				<p><em>Present Tense imperfect:</em></p>
+              			</td>
+              			<td width="342" class="subtable">
+              				<p><em>&nbsp;</em></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td width="378" class="subtable-light">
+              				<p>Subject-Verb-Object</p>
+              				<p>The dog eats the food</p>
+              				<p><em>Ya pezha ojuy yu t&rsquo;ojur</em></p>
+              			</td>
+              			<td width="342" class="subtable-light">
+              				<p>&nbsp;</p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td width="378" class="subtable">
+              				<p><em>Past tense imperfect:</em></p>
+              			</td>
+              			<td width="342" class="subtable">
+              				<p><em>Past tense perfect:</em></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td width="378" class="subtable-light">
+              				<p>Subject-Object-Verb</p>
+              				<p>The dog was eating the food</p>
+              				<p>*the dog the food ate</p>
+              				<p><em>Ya pezha yu t&rsquo;ojur ojuy </em></p>
+              			</td>
+              			<td width="342" class="subtable-light">
+              				<p>Subject-Object-Verb</p>
+              				<p>The dog ate the food</p>
+              				<p>*the dog the food ate</p>
+              				<p><em>Ya pezha yu t&rsquo;ojur uj ojuy</em></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td width="378" class="subtable">
+              				<p><em>Future tense imperfect:</em></p>
+              			</td>
+              			<td width="342" class="subtable">
+              				<p><em>Future tense perfect:</em></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td width="378" class="subtable-light">
+              				<p>Verb-Subject-Object</p>
+              				<p>The dog will eat the food</p>
+              				<p>*will eat the dog the food</p>
+              				<p><em>Ojuy ya pezha yu t&rsquo;ojur</em></p>
+              			</td>
+              			<td width="342" class="subtable-light">
+              				<p>Verb-Subject-Object</p>
+              				<p>The dog is going to eat the food</p>
+              				<p>*is going to eat the dog the food</p>
+              				<p><em>Uj ojuy ya pezha yu t&rsquo;ojur</em></p>
+              			</td>
+              		</tr>
+              	</tbody>
+              </table>
+              <br>
+              <!--Syntactic Construction-->
+              <table class="tables" id="syntacticconstruction">
+              	<tbody>
+              		<tr>
+              			<td width="719" class="subtable">
+              				<p><strong>Syntactic construction:</strong></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td width="719" class="subtable-light">
+              				<p>While to word order in Yozah changes often, the language will always use head initial structure. Here is a recap of some sentence constructions along with a breakdown</p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td width="719" class="subtable-light">
+              				<p>The six dogs see the houses</p>
+              				<p>&nbsp;</p>
+              				<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Subject&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Verb&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Object</p>
+              				<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <em>Ya</em><em>zhok&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pezha&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; up<sup>j</sup>ar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; yuk&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rub<sup>j</sup>abur</em></p>
+              				<p>Art:Nat:Def:6quntifier&nbsp;&nbsp;&nbsp;&nbsp; dog&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; eat:present&nbsp;&nbsp;&nbsp;&nbsp; art:Non-nat:Def:plur&nbsp; house:Acuss&nbsp;</p>
+              				<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+              				<p><em>Ya</em><em>zhok pezha up<sup>j</sup>ar yuk rub<sup>j</sup>abur</em></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td width="719" class="subtable-light">
+              				<p>I loved his three dogs</p>
+              				<p>&nbsp;</p>
+              				<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Subject&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Object&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Verb</p>
+              				<p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ng-yad<sup>j</sup>o&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; keshar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; p-Aros-ngar </em></p>
+              				<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3rd:Sgl:Male-Art:Nat:Def:3Qun&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DOG:Acc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1st:Sgl:Nom-LOVE-3rd:Sgl:Male:Acc</p>
+              				<p>&nbsp;</p>
+              				<p><em>&nbsp;Ng-yad<sup>j</sup>o keshar p-Aros-ngar </em></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td width="719" class="subtable-light">
+              				<p>The unhappy cat does not eat the fruit quickly</p>
+              				<p><em>&nbsp;</em></p>
+              				<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Subject&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Verb&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Object</p>
+              				<p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ya &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;chash-bomja &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kesha &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;r</em><em>oche-du&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; chash-oju&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ya&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ruse-r</em></p>
+              				<p>Art:Nat:Def&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Neg:Happy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cat&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Quick:Adv&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; neg:Eat&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Art:Nat:Def&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fruit:Acc</p>
+              				<p><em>&nbsp;</em></p>
+              				<p><em>Ya chashbomja kesha r</em><em>ochedu chashoju ya ruse</em></p>
+              			</td>
+              		</tr>
+              	</tbody>
+              </table>
+              <br>
+              <!--Noun Substitution-->
+              <table class="tables" id="nounsubstitution">
+              	<tbody>
+              		<tr>
+              			<td colspan="2" width="719" class="subtable">
+              				<p><strong>Noun Substitution:</strong></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td colspan="2" width="719" class="subtable-light">
+              				<p>Articles can be used to refer to a noun only if it has been previously referred to in the conversation. In order to do this the article must matches the noun class and it must take the ending <em>-r </em>if it is a direct object or indirect object. This can be used with plural and quantity modifiers as opposed to pronouns</p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td colspan="2" width="719" class="subtable">
+              				<p><em>Example:</em></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td width="360" class="subtable-light">
+              				<p>The teacher gave me the fruit</p>
+              				<p><em>Yu shaubʲeɾu Zhakpor Ya ruser</em></p>
+              				<p>The teacher gave me it</p>
+              				<p><em>Yu shaubʲeɾu Zhakpor Yar</em></p>
+              			</td>
+              			<td width="360" class="subtable-light">
+              				<p>The four rabbit sees the houses</p>
+              				<p>Yacho <em>otasha up<sup>j</sup>ar yuk rub<sup>j</sup>abur</em></p>
+              				<p>*It(four) sees it(plural)</p>
+              				<p>Yacho <em>up<sup>j</sup>ar yukr</em></p>
+              			</td>
+              		</tr>
+              	</tbody>
+              </table>
+              <br>
+              <!--Questions-->
+              <table class="tables" id="question">
+              	<tbody>
+              		<tr>
+              			<td colspan="2" width="719" class="subtable">
+              				<p><strong>Questions:</strong></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td colspan="2" width="719" class="subtable-light">
+              				<p>Questions are constructed using a particle that is added at the beginning of the phrase or sentence. All questions except who are marked in this way. As you may have seen in the <a href="#Pronoun">pronoun list</a> above, who is a pronoun meaning it is marked on the verb in the same way other pronouns are. When responding to a question the verb Eyer - to be is used to give a answer.</p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td width="342" class="subtable">
+              				<p><em>Who Questions:</em></p>
+              			</td>
+              			<td width="378" class="subtable">
+              				<p><em>What Questions:</em></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td width="342" class="subtable-light">
+              				<p><em>Ata &ndash; </em>Who</p>
+              				<p>Q: Who hates him?</p>
+              				<p>Q: <em>At-Chashamros-ngar</em></p>
+              				<p>A: * she is who hates him</p>
+              				<p>A: M<em>a-e at-chashamros-ngar</em></p>
+              			</td>
+              			<td width="378" class="subtable-light">
+              				<p><em>Atap &ndash; </em>what</p>
+              				<p>Q: What did she buy?</p>
+              				<p>Q: <em>Atap m-ubuch</em></p>
+              				<p>A: A Gift is what I bought</p>
+              				<p>A: <em>Yu Sum<sup>j</sup>osu e Atap m-ubuch</em></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td width="342" class="subtable">
+              				<p><em>Where Questions:</em></p>
+              			</td>
+              			<td width="378" class="subtable">
+              				<p><em>Why Questions:</em></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td width="342" class="subtable-light">
+              				<p><em>Atak &ndash; </em>where</p>
+              				<p>Q: Where do you sleep?</p>
+              				<p>Q: <em>Atak k-Osop</em></p>
+              				<p>A: A bed is where is sleep</p>
+              				<p>A: yu <em>Oseto</em> e Atak p-osop</p>
+              			</td>
+              			<td width="378" class="subtable-light">
+              				<p><em>Atad &ndash; why </em></p>
+              				<p>Q: Why do you hate me?</p>
+              				<p>Q: <em>Atad</em> <em>k-Chashamros-par</em></p>
+              				<p>A: You do not buy me gifts is why I hate you</p>
+              				<p>A: <em>k-chashubuch-par yuk sum<sup>j</sup>osur</em> <em>e Atad</em> <em>k-Chashamros-par</em></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td width="342" class="subtable">
+              				<p><em>When Questions:</em></p>
+              			</td>
+              			<td width="378" class="subtable">
+              				<p><em>How Questions:</em></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td width="342" class="subtable-light">
+              				<p><em>Atar &ndash; </em>when</p>
+              				<p><em>Omoru</em> <em>&ndash;</em> Yesterday</p>
+              				<p>Q: when did they buy a gift?</p>
+              				<p>Q:<em> Atar d-Ubuch Yu Sum<sup>j</sup>osur</em></p>
+              				<p>A: yesterday is when they bought a gift</p>
+              				<p>A: <em>Omoru e</em> <em>Atar Yu Sum<sup>j</sup>osur uj d-Ubuch </em></p>
+              			</td>
+              			<td width="378" class="subtable-light">
+              				<p><em>Atam &ndash; How</em></p>
+              				<p>Q: How did Ze give you(zha) the letter?</p>
+              				<p>Q: <em>Atam yu rejepur t-zhak-zhar </em></p>
+              				<p>A: Ze sent it is how Ze gave me a letter</p>
+              				<p>A: <em>yor t-sha e yu rejepur t-zhak-zhar</em></p>
+              			</td>
+              		</tr>
+              	</tbody>
+              </table>
+              <br>
+              <!--Commands-->
+              <table class="tables" id="command">
+              	<tbody>
+              		<tr>
+              			<td width="719" class="subtable">
+              				<p><strong>Commands</strong></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td width="719" class="subtable-light">
+              				<p>Commands are very common in Yozah speaking. While they may seem rude in other languages or cultures a command in Yozah is the politest way of requesting an action. They are constructed by using the perfective particle <em>uj </em>before the verb in a present tense statement. While you can still attach pronouns to this verb the original unconjugated ending must remain. This turns the statement into a command.</p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td width="719" class="subtable">
+              				<p><em>Examples:</em></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td width="719" class="subtable-light">
+              				<p><em>Uj ojuyer &ndash; </em>Eat!</p>
+              				<p><em>Uj umchatyur-mar - </em>answer me!</p>
+              				<p><em>Uj umazakyur se ya pezha &ndash; </em>Play with the dog!</p>
+              			</td>
+              		</tr>
+              	</tbody>
+              </table>
+              <br>
+              <h1 id="pragmatics"><strong>Pragmatics</strong></h1>
+              <hr>
+              <!--Speech Acts-->
+              <table class="tables" id="speechacts">
+              	<tbody>
+              		<tr>
+              			<td width="719" class="subtable">
+              				<p><strong>Speech Acts</strong></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td width="719" class="subtable-light">
+              				<p>In the culture of many Yozah speakers, direct forms of communication are considered to be more polite then indirect. Most Yozah speakers are very blunt with some factions and clans even practicing absolute honesty. This is when speakers never lie during a conversation and generally saying exactly what they are thinking without a filter. It is because of this cultural practice that it is often considered rude to use indirect speech acts as a way to buffer or mask the intent of a speech act.</p>
+              			</td>
+              		</tr>
+              	</tbody>
+              </table>
+              <br>
+              <h1 id="orthography"><strong>Orthography</strong></h1>
+              <hr>
+              <!--Writting System-->
+              <table class="tables" id="writingsystem">
+              	<tbody>
+              		<tr>
+              			<td colspan="2" width="719" class="subtable">
+              				<p><strong>Writing System:</strong></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td colspan="2" width="719" class="subtable-light">
+              				<p>Yozah&rsquo;s writing system is an abugida, meaning that the vowels are marked on the consonants. Each character has a space in the center dedicated to the vowel that proceeds it. The vowels are marked as either a circle or square filled in or hollow. The squares indicate that the vowel is a non-natural noun class vowel while the circle indicates the natural noun class vowel. If the circle or square if filled in it indicates the article ending is a definite article. If it is not filled in the vowel is represents an indefinite article. Vowels can exist on their own as long as they come before a consonant and do not proceed a consonant. Consonants can exist on their own as long as there is no vowel after it. Palatalization is marked as distanced characters which are usually the character of its base sounds flipped. Words are strung together with a continuous line that only ends at the end of a sentence. Sentences are normally read vertically however horizontal reading is still used and understood. Negations are marked as special characters that are added to the beginning of words they are applied too. Negations always use this character and are never spelled with the characters that make up its sounds (<a href="#Phonetics">See phonetics for full orthographic list</a>) Visit&nbsp; <a href="https://www.powerdownpodcast.com/yozah.html">https://www.powerdownpodcast.com/yozah.html</a> to help write in Yozah script.&nbsp;</p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td colspan="2" width="719" class="subtable">
+              				<p><em>Examples:</em></p>
+              			</td>
+              		</tr>
+              		<tr>
+              			<td width="360" class="subtable-light">
+              				<p><em>Ya</em> = ( 5 &ndash; Y ) +(&nbsp; 3 &ndash; a )</p>
+              				<p>a - <em>Ya</em></p>
+              				<p>&nbsp;</p>
+              				<p><em>Yozah</em></p>
+              				<p><em>Ya</em> = ( 5 &ndash; <em>Y</em> ) +(&nbsp; 1 &ndash; <em>a</em> )</p>
+              				<p><em>Zah = </em>( + &ndash; <em>z</em> ) +(&nbsp; 1 &ndash; <em>a </em>)</p>
+              				<p>b- - Yozah</p>
+              				<p>&nbsp;</p>
+              				<p><em>Osopyer - </em>to sleep</p>
+              				<p>O + so + p + ye + r</p>
+              				<p>4Ą6Aą</p>
+              				<p>&nbsp;</p>
+              				<p><em>p-osp &ndash; </em>I sleep</p>
+              				<p>po + s + p</p>
+              				<p>cĀ6</p>
+              			</td>
+              			<td width="360" class="subtable-light">
+              				<p><em>t&rsquo;oju &ndash; </em>food</p>
+              				<p><em>t&rsquo;o +ju</em></p>
+              				<p>mA</p>
+              				<p>&nbsp;</p>
+              				<p><em>Yu sosu</em> - The sword</p>
+              				<p>B}ăĂ</p>
+              				<p>&nbsp;</p>
+              				<p><em>P-om<sup>j</sup>ub yu d<sup>j</sup>uzur &ndash; </em>I want money</p>
+              				<p>dL#}B}T/ą</p>
+              				<p>&nbsp;</p>
+              				<p><em>m-chash-umat Yu muzhoko-r &ndash; </em>She does not hear to music</p>
+              				<p>! <em>&ndash;</em> c<em>hash</em></p>
+              				<p>7!2e8}B}F;)ą</p>
+              				<p><em>&nbsp;</em></p>
+              				<p>&nbsp;</p>
+              			</td>
+              		</tr>
+              	</tbody>
+              </table>
+              <br>
+
+          </div>
+          <div class="sidebar">
+            <ul class="sidebar-nav">
+              <li class="sidebar-item"><a href="#phonology"><p class="normal sidebar-text"><strong>Phonology</strong></p></a></li>
+              <li class="sidebar-item"><a href="#phonetics"><p class="normal sidebar-text">&nbsp;Phonetics</p></a></li>
+              <li class="sidebar-item"><a href="#morphology"><p class="normal sidebar-text"><strong>Morphology</strong></p></a></li>
+              <li class="sidebar-item"><a href="#pronouns"><p class="normal sidebar-text">&nbsp;Pronouns</p></a></li>
+              <li class="sidebar-item"><a href="#nounclass"><p class="normal sidebar-text">&nbsp;Noun Classes</p></a></li>
+              <li class="sidebar-item"><a href="#grammar"><p class="normal sidebar-text">&nbsp;Grammatical Cases</p></a></li>
+              <li class="sidebar-item"><a href="#nominative"><p class="normal sidebar-text">&nbsp;Nominative Case</p></a></li>
+              <li class="sidebar-item"><a href="#accusative"><p class="normal sidebar-text">&nbsp;Accusative Case</p></a></li>
+              <li class="sidebar-item"><a href="#dative"><p class="normal sidebar-text">&nbsp;Dative Case</p></a></li>
+              <li class="sidebar-item"><a href="#genitive"><p class="normal sidebar-text">&nbsp;Genitive Case</p></a></li>
+              <li class="sidebar-item"><a href="#adjective"><p class="normal sidebar-text">&nbsp;Adjectives</p></a></li>
+              <li class="sidebar-item"><a href="#adverb"><p class="normal sidebar-text">&nbsp;Adverbs</p></a></li>
+              <li class="sidebar-item"><a href="#verbsofmotion"><p class="normal sidebar-text">&nbsp;Verbs of Motion</p></a></li>
+              <li class="sidebar-item"><a href="#preposition"><p class="normal sidebar-text">&nbsp;Prepositions</p></a></li>
+              <li class="sidebar-item"><a href="#negation"><p class="normal sidebar-text">&nbsp;Negation</p></a></li>
+              <li class="sidebar-item"><a href="#propernoun"><p class="normal sidebar-text">&nbsp;Proper Nouns</p></a></li>
+              <li class="sidebar-item"><a href="#syntax"><p class="normal sidebar-text"><strong>Syntax</strong></p></a></li>
+              <li class="sidebar-item"><a href="#wordorder"><p class="normal sidebar-text">&nbsp;Word Order</p></a></li>
+              <li class="sidebar-item"><a href="#syntacticconstruction"><p class="normal sidebar-text">&nbsp;Construction</p></a></li>
+              <li class="sidebar-item"><a href="#nounsubstitution"><p class="normal sidebar-text">&nbsp;Noun Substitution</p></a></li>
+              <li class="sidebar-item"><a href="#question"><p class="normal sidebar-text">&nbsp;Questions</p></a></li>
+              <li class="sidebar-item"><a href="#command"><p class="normal sidebar-text">&nbsp;Commands</p></a></li>
+              <li class="sidebar-item"><a href="#pragmatics"><p class="normal sidebar-text"><strong>Pragmatics</strong></p></a></li>
+              <li class="sidebar-item"><a href="#speechacts"><p class="normal sidebar-text">&nbsp;Speech Acts</p></a></li>
+              <li class="sidebar-item"><a href="#orthography"><p class="normal sidebar-text"><strong>Orthography</strong></p></a></li>
+              <li class="sidebar-item"><a href="#writingsystem"><p class="normal sidebar-text">&nbsp;Writing System</p></a></li>
+            </ul>
+
+          </div>
+        </div>
+        <div id="lexicon" class="page tabcontent">
+          <h1><strong>Lexicon</strong></h1>
+          <hr>
+          <!--Words and Morphemes-->
+          <table width="732" class="tables">
             <tbody>
-            <tr>
-            <td colspan="2" width="732">
-            <p><strong>Yozah</strong></p>
-            </td>
-            </tr>
-            <tr>
-            <td colspan="2" width="732">
-            <p>Below is a tutorial on the grammer of Yozah</p>
-            </td>
-            </tr>
-            <tr>
-            <td width="312">
-            <p><strong>Consonants:</strong></p>
-            </td>
-            <td width="420">
-            <p><strong>Vowels:</strong></p>
-            </td>
-            </tr>
-            <tr>
-            <td width="312">
-            <p><span class="yozah">7</span>/ <span class="yozah">  .</span><em> M</em> - /m/ - [m/mʲ]</p></span>
-            <p><span class="yozah">8</span>/ <span class="yozah">  ,</span> <em>T</em> - /t/ - [t/t&rsquo;]</p>
-            <p><span class="yozah">@</span>/ <span class="yozah">  &lsquo;</span><em>0</em> - /d/ - [d/dʲ]</p>
-            <p><span class="yozah">$</span> <em>K</em> - /k/</p>
-            <p><span class="yozah">&rdquo;</span> <em>N - /n/</em></p>
-            <p><span class="yozah">_</span> <em>Ng</em> - /ŋ/</p>
-            <p><span class="yozah">Ā</span> <em>S </em>- /s/</p>
-            <p><span class="yozah">ą</span> <em> R </em>- /ɾ/</p>
-            <p><span class="yozah">6</span>/ <span class="yozah">  9</span><em>P </em>- /p/ - [p/pʲ]</p>
-            <p><span class="yozah">#</span>/ <span class="yozah">  *</span><em> B</em> - /b/ - [b/bʲ]</p>
-            <p><span class="yozah">&lt;</span> <em> Ch</em> - /t͡ɕ/</p>
-            <p><span class="yozah">+</span> <em>Zh</em> - /z/</p>
-            <p><span class="yozah">]</span> <em> Sha</em> - /ʂ/</p>
-            </td>
-            <td width="420">
-            <p><em>Article vowels:</em></p>
-            <p><span class="yozah">a</span><em> Ya</em> - /ja/</p>
-            <p><span class="yozah">A</span><em> Ye</em> - /ji/</p>
-            <p><span class="yozah">b</span><em> Yo</em> - /jo/</p>
-            <p><span class="yozah">B</span><em> Yo - </em>/ju/&nbsp;&nbsp;</p>
-            <p>&nbsp;</p>
-            <p><em>Normal vowels:</em></p>
-            <p><span class="yozah">3</span> <em>A</em>- /a/</p>
-            <p><span class="yozah">1</span><em> E</em> - /i/</p>
-            <p><span class="yozah">4</span> <em>O </em>- /o/</p>
-            <p><span class="yozah">2</span><em> U</em> - /u/</p>
-            <p>&nbsp;</p>
-            </td>
-            </tr>
-            <tr>
-            <td colspan="2" width="732">
-            <p><strong>Phonetics variation:</strong></p>
-            </td>
-            </tr>
-            <tr>
-            <td colspan="2" width="732">
-            <p>Within the VCV structure the non-fricative consonants usually become palatalized. Outside of this structure they will often fall more towards a standard pronunciation.</p>
-            </td>
-            </tr>
-            <tr>
-            <td colspan="2" width="732">
-            <p><strong>Syllable structure:</strong></p>
-            </td>
-            </tr>
-            <tr>
-            <td colspan="2" width="732">
-            <p>Nouns most commonly use CVCVC structure while verbs mostly use VCVC. Article vowels are mostly only seen in articles however both phonemes can exist next to each other in other words. Nouns can only end with a vowel. The minimal structure that is allowed is V for articles, CV for nouns and VC for verb.&nbsp; Consonant cluster can not exceed 2 phonemes without requiring a vowel in between.</p>
-            </td>
-            </tr>
-            <tr>
-            <td colspan="2" width="732">
-            <p><strong>Suprasegmental Features:</strong></p>
-            </td>
-            </tr>
-            <tr>
-            <td colspan="2" width="732">
-            <p>Tone: Questions are formed using falling tone while statements are made with a medium tone. Aggression can often be expressed with low tone while joy can be expressed with a higher tone.</p>
-            </td>
-            </tr>
-            <tr>
-            <td colspan="2" width="732">
-            <p>Stress: The stress of a word usually falls on the nucleus of the syllable so in the common VCV the stress is on the C.</p>
-            </td>
-            </tr>
+              <tr>
+                <td colspan="2" width="732" class="subtable">
+                  <p><strong>Words and Morphemes:</strong></p>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2" width="732" class="subtable-light">
+                  <p>Here is a list of all the words in the current Yozah lexicon. On the left is the list of words and on the right is a list of morphemes that are present in a few of the words. The morphemes will help show the construction of the words.</p>
+                </td>
+              </tr>
+              <tr>
+                <td width="312" class="subtable">
+                  <p><em>Nouns:</em></p>
+                </td>
+                <td width="420" class="subtable">
+                  <p><em>Morphemes:</em></p>
+                </td>
+              </tr>
+              <tr>
+                <td width="312" class="subtable-light">
+                  <p><em>Bobache</em> &ndash; water</p>
+                  <p><em>Sosu</em> &ndash; sword</p>
+                  <p><em>Ruse</em> &ndash; fruit</p>
+                  <p><em>Rub<sup>j</sup>abu</em> &ndash; house</p>
+                  <p><em>mod<sup>j</sup>abu &ndash; </em>home</p>
+                  <p><em>Bujocha &ndash; </em>cave</p>
+                  <p><em>Ngat&rsquo;ba</em> &ndash; dessert</p>
+                  <p><em>dʲut&rsquo;ose &ndash; </em>mountain</p>
+                  <p><em>Shaubʲeɾu</em> &ndash; teacher</p>
+                  <p><em>Chaubʲeɾu</em> &ndash; student</p>
+                  <p><em>T&rsquo;echmatu</em> &ndash; robot</p>
+                  <p><em>T&rsquo;echu &ndash; </em>machine</p>
+                  <p><em>Bʲetuso &ndash; </em>plant</p>
+                  <p><em>Bobache &ndash; </em>water</p>
+                  <p><em>Porena </em>&ndash; fire</p>
+                  <p><em>Tubachu &ndash; </em>alcohol</p>
+                  <p><em>Rep<sup>j</sup>e&ndash; </em>wheat</p>
+                  <p><em>Turep<sup>j</sup>u &ndash; </em>bread</p>
+                  <p><em>T&rsquo;oju &ndash; </em>food</p>
+                  <p><em>Puda &ndash; </em>human</p>
+                  <p><em>Pezha &ndash; </em>dog</p>
+                  <p><em>Kesha &ndash; </em>cat</p>
+                  <p><em>Otasha &ndash; </em>rabbit</p>
+                  <p><em>Osusora &ndash; </em>Snake</p>
+                  <p><em>Oseto &ndash; </em>bed</p>
+                  <p><em>Pusho &ndash; </em>table</p>
+                  <p><em>Sosud<sup>j</sup>u &ndash; </em>writing utensil</p>
+                  <p><em>Muzhoko &ndash; </em>music</p>
+                  <p><em>Rejepu &ndash; </em>letter</p>
+                  <p><em>Jutobu &ndash; </em>story</p>
+                  <p><em>Sum<sup>j</sup>osu &ndash; </em>gift</p>
+                  <p><em>D<sup>j</sup>uzu &ndash; </em>money</p>
+                  <p><em>Chotu &ndash; </em>question</p>
+                  <p><em>Chodutu &ndash; </em>answer</p>
+                  <p>moru &ndash; today</p>
+                  <p><em>Omoru</em> <em>&ndash;</em> yesterday</p>
+                  <p>Odomoru &ndash; tomorrow</p>
+                </td>
+                <td rowspan="5" width="420" class="subtable-light">
+                  <p>Teacher and student both use the root <em>ub<sup>j</sup>eru </em>which means knowledge. The morpheme <em>sha </em>means sender creating the meaning &ldquo;sender of knowledge&rdquo; i.e. teacher when it is attached to <em>ub<sup>j</sup>eru</em>. The morpheme <em>cha </em>means receiver creating the meaning &ldquo;receiver of knowledge&rdquo; i.e. student when attached to <em>ub<sup>j</sup>eru.</em> This construction works with verbs too as you can see in the verb &ldquo;to send&rdquo;, <em>shatyer. </em></p>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td width="202" class="subtable-light">
+                          <p><em>&nbsp;</em></p>
+                          <p><em>Shaubʲeɾu</em></p>
+                          <p><em>Sha-ubʲeɾu</em></p>
+                          <p><em>Sender:Knowledge</em></p>
+                          <p>Teacher</p>
+                          <p>&nbsp;</p>
+                        </td>
+                        <td width="202" class="subtable-light">
+                          <p><em>&nbsp;</em></p>
+                          <p><em>chaubʲeɾu</em></p>
+                          <p><em>cha-ubʲeɾu</em></p>
+                          <p><em>Reciever:Knowledge</em></p>
+                          <p>Teacher</p>
+                          <p>&nbsp;</p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p>&nbsp;</p>
+                  <p>The root <em>bache </em>in the word for water means liquid and when combined with <em>bo </em>creates the meaning &ldquo;drinkable water&rdquo;. The morpheme <em>tu </em>means fermented so combined with <em>bache</em> creates the meaning fermented liquid i.e. alcohol. <em>&nbsp;Tu </em>is also used in the construction of the word bread as it attaches to wheat to create the meaning &ldquo;fermented wheat&rdquo;. (notice how in the construction of <em>turep<sup>j</sup>u </em>from<em> rep<sup>j</sup>e</em> the ending changes to indicate that the transformation was man-made).</p>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td width="202" class="subtable-light">
+                          <p><em>&nbsp;</em></p>
+                          <p><em>Bobache</em></p>
+                          <p><em>Bo-bache</em></p>
+                          <p>Drinkable:Liquid</p>
+                          <p>Water</p>
+                          <p>&nbsp;</p>
+                        </td>
+                        <td width="202" class="subtable-light">
+                          <p><em>&nbsp;</em></p>
+                          <p><em>tubachu </em></p>
+                          <p><em>tu-bachu</em></p>
+                          <p>Fremented:Liquid</p>
+                          <p>Alcohol</p>
+                          <p>&nbsp;</p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p>&nbsp;</p>
+                  <p>&nbsp;</p>
+                  <p>&nbsp;</p>
+                  <p>&nbsp;</p>
+                  <p>&nbsp;</p>
+                  <p>&nbsp;</p>
+                  <p>&nbsp;</p>
+                  <p>&nbsp;</p>
+                  <p>&nbsp;</p>
+                  <p>&nbsp;</p>
+                  <p>&nbsp;</p>
+                  <p>&nbsp;</p>
+                  <p>&nbsp;</p>
+                  <p>&nbsp;</p>
+                  <p>&nbsp;</p>
+                  <p>&nbsp;</p>
+                  <p>&nbsp;</p>
+                  <p>&nbsp;</p>
+                  <p>&nbsp;</p>
+                  <p>&nbsp;</p>
+                  <p>&nbsp;</p>
+                  <p>The construction of storyteller is interesting as it uses the morpheme s<em>ha </em>in the verb &ldquo;to tell&rdquo; which is then added to the word for story to create the meaning &ldquo;to send/tell a story&rdquo;.</p>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td width="202" class="subtable-light">
+                          <p><em>&nbsp;</em></p>
+                          <p><em>Shatamyer</em></p>
+                          <p><em>Sha-tamyer</em></p>
+                          <p><em>Send:by way of mouth</em></p>
+                          <p>To tell</p>
+                        </td>
+                        <td width="202" class="subtable-light">
+                          <p><em>&nbsp;</em></p>
+                          <p><em>Shatamjutobuyer</em></p>
+                          <p><em>Sha-tam-jutobuyer</em></p>
+                          <p><em>Send:by way of mouth:Stories</em></p>
+                          <p>To tell Storyteller</p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p>&nbsp;</p>
+                  <p>The root <em>chotu </em>meaning question is used in the verb &ldquo;to ask&rdquo; and &ldquo;to answer&rdquo;.</p>
+                  <p>&nbsp;</p>
+                  <p>The root <em>aros</em> means love. This is found in the verbs &ldquo;to love&rdquo;, &ldquo;to like&rdquo;, and &ldquo;to hate&rdquo; as these are all varying degrees of love.</p>
+                  <p>&nbsp;</p>
+                  <p>The morpheme<em> Chash </em>is used to negate. This is show in the verb &ldquo;to hate&rdquo; which means &ldquo;to not love&rdquo;, with the adjective unhappy which means &ldquo;not happy&rdquo; and the adjective black which means the &ldquo;not white&rdquo;.</p>
+                  <p>&nbsp;</p>
+                  <p>&nbsp;</p>
+                </td>
+              </tr>
+              <tr>
+                <td width="312" class="subtable">
+                  <p><em>Verbs:</em></p>
+                </td>
+              </tr>
+              <tr>
+                <td width="312" class="subtable-light">
+                  <p><em>Ojuyer &ndash; </em>to eat</p>
+                  <p><em>achyur &ndash; </em>to drink</p>
+                  <p><em>zhakyar &ndash; </em>to give</p>
+                  <p><em>up<sup>j</sup>aryur &ndash; </em>to see</p>
+                  <p><em>umat&rsquo;yer &ndash; </em>to hear</p>
+                  <p><em>Om<sup>j</sup>ubyer &ndash; </em>to want</p>
+                  <p><em>Osopyer &ndash; </em>to sleep</p>
+                  <p><em>Apjuyur &ndash;</em> to make</p>
+                  <p><em>Uchotyur &ndash; </em>to ask</p>
+                  <p><em>Umchatyur &ndash; </em>to answer</p>
+                  <p><em>Arosyur &ndash; </em>to love</p>
+                  <p><em>Upamrosyur &ndash; </em>to like</p>
+                  <p><em>Chashamrosyur &ndash; </em>to hate</p>
+                  <p><em>Shayer &ndash; </em>to send</p>
+                  <p><em>Shatamyer &ndash; </em>to tell</p>
+                  <p><em>Shatamjutobuyer &ndash; </em>to tell stories</p>
+                  <p><em>Ubuchyer &ndash; </em>to buy</p>
+                  <p><em>Umazakyur &ndash; </em>to play</p>
+                  <p><em>Dodyer &ndash; </em>to go</p>
+                  <p><em>Chedodyer &ndash;</em> to go toward</p>
+                  <p>Shadodyer &ndash; to go away</p>
+                  <p>D<sup>j</sup>odod &ndash; to go downward</p>
+                  <p>D<sup>j</sup>adod &ndash; to go upward</p>
+                  <p><em>Romyer &ndash; </em>to be located</p>
+                  <p><em>Karomyer</em> &ndash; to be located in</p>
+                  <p><em>medyer</em>&ndash; to be located above</p>
+                  <p><em>madyer &ndash; </em>to be located below</p>
+                  <p><em>Semyer &ndash; </em>to be with</p>
+                  <p><em>Momyer</em> &ndash; to (be) possessed by</p>
+                  <p>Eyer &ndash; to be</p>
+                </td>
+              </tr>
+              <tr>
+                <td width="312" class="subtable">
+                  <p><em>Adjectives:</em></p>
+                </td>
+              </tr>
+              <tr>
+                <td width="312" class="subtable-light">
+                  <p><em>Bomjo &ndash; </em>happy</p>
+                  <p><em>Chashbomjo &ndash; </em>unhappy</p>
+                  <p><em>Odut&rsquo;jo &ndash; </em>white</p>
+                  <p><em>Chashodut&rsquo;jo &ndash; </em>black</p>
+                  <p><em>Rochjo &ndash; </em>quick</p>
+                  <p><em>Chashrochjo &ndash; </em>slow</p>
+                  <p>Dapojo &ndash; attractive</p>
+                  <p>Chashdapojo &ndash; ugly/not attractive</p>
+                </td>
+              </tr>
             </tbody>
           </table>
-          <table class="tables">
-            <tbody>
-            <tr>
-            <td colspan="4" width="732">
-            <p><strong>Pronouns:</strong></p>
-            </td>
-            </tr>
-            <tr>
-            <td colspan="4" width="732">
-            <p>Unless a pronoun is used on its own, they will always be affixed to the verb. The subject pronoun is attached as a prefix while the object and indirect object pronoun is attached as a suffix.</p>
-            </td>
-            </tr>
-            <tr>
-            <td width="129">
-            <p><em>Stand alone:</em></p>
-            </td>
-            <td width="135">
-            <p><em>Nominative:</em></p>
-            </td>
-            <td width="162">
-            <p><em>Accusative:</em></p>
-            </td>
-            <td width="306">
-            <p><em>Dative:</em></p>
-            </td>
-            </tr>
-            <tr>
-            <td width="129">
-            <p><em>Ka- </em>You (familiar)</p>
-            <p><em>Zha &ndash; </em>You (Polite)</p>
-            <p><em>Pa &ndash; </em>Me</p>
-            <p><em>Nga &ndash; </em>He</p>
-            <p><em>Ma </em>&ndash; She</p>
-            <p><em>Ta &ndash; </em>Ze</p>
-            <p><em>Cha &ndash; </em>We</p>
-            <p><em>Da &ndash; </em>They</p>
-            <p><em>Ata &ndash; </em>Who</p>
-            </td>
-            <td width="135">
-            <p><em>K- </em>You (familiar)</p>
-            <p><em>Zh &ndash; </em>You (Polite)</p>
-            <p><em>P &ndash; </em>I</p>
-            <p><em>Ng &ndash; </em>He</p>
-            <p><em>M &ndash; </em>She</p>
-            <p><em>T &ndash; </em>Ze</p>
-            <p><em>Ch &ndash;</em> We</p>
-            <p><em>D &ndash; </em>They</p>
-            <p><em>At - Whom</em></p>
-            </td>
-            <td width="162">
-            <p><em>Kar- </em>You (familiar)</p>
-            <p><em>Zhar &ndash; </em>You (Polite)</p>
-            <p><em>Par &ndash; </em>Me</p>
-            <p><em>Ngar &ndash; </em>Him</p>
-            <p><em>Mar &ndash; </em>Her</p>
-            <p><em>Tar &ndash; </em>Hir</p>
-            <p><em>Char &ndash; </em>Us</p>
-            <p><em>Dar &ndash; </em>Them</p>
-            <p><em>Atar &shy;&shy;&ndash; </em>Who</p>
-            </td>
-            <td width="306">
-            <p><em>Kor- </em>You (familiar)</p>
-            <p><em>Zhor &ndash; </em>You (Polite)</p>
-            <p><em>Por &ndash; </em>Me</p>
-            <p><em>Ngor &ndash; </em>Him</p>
-            <p><em>Mor &ndash; H</em>er</p>
-            <p><em>Tor &ndash; </em>Hir</p>
-            <p><em>Chor &ndash; </em>Us</p>
-            <p><em>Dor &ndash; </em>Them</p>
-            <p><em>Ator -</em> who</p>
-            </td>
-            </tr>
-            <tr>
-            <td colspan="4" width="732">
-            <p><em>Examples:</em></p>
-            </td>
-            </tr>
-            <tr>
-            <td width="129">
-            <p>Ka &ndash; You (referred to singularly without anything else)</p>
-            </td>
-            <td width="135">
-            <p>I eat</p>
-            <p><em>p</em>-(eat)</p>
-            <p><em>p- oju</em></p>
-            <p><em>poju</em></p>
-            </td>
-            <td width="162">
-            <p>I see you</p>
-            <p><em>p</em>-(see)-<em>kar</em></p>
-            <p><em>p-up<sup>j</sup>ar-kar</em></p>
-            <p><em>pup<sup>j</sup>arkar</em></p>
-            </td>
-            <td width="306">
-            <p>I give you bread</p>
-            <p><em>p</em>-(give)-<em>kor </em>(bread)</p>
-            <p><em>p-zhak-kor </em>(bread)</p>
-            <p><em>pzhakor </em>(bread)</p>
-            </td>
-            </tr>
-            </tbody>
-            </table>
+          <br>
         </div>
         <div id="culture" class="page tabcontent">
-          <p>Culture</p>
-        </div>
-        <div id="info" class="page tabcontent">
-          <p>Info</p>
+          <h1><strong>History</strong></h1>
+          <hr>
+          <!--History of writting system-->
+          <table class="tables">
+            <tbody>
+              <tr>
+                <td width="719" class="subtable">
+                  <p><strong>History of Yozah Writing System:</strong></p>
+                </td>
+              </tr>
+              <tr>
+                <td width="719" class="subtable-light">
+                  <p>The history of Yozah language can be broken up into 3 stages: Ancient Yozah, Traditional Yozah and Modern Yozah.</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <br>
+          <!--Acient Yozah-->
+          <table class="tables">
+            <tbody>
+              <tr>
+                <td colspan="2" width="719" class="subtable">
+                  <p><strong>Ancient Yozah:</strong></p>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2" width="719" class="subtable-light">
+                  <p>Ancient Yozah was often written on carvable sandstone and clay tiles. Writers would use small knives known as <em>sosud<sup>j</sup>u </em>to engrave each character into the material. <em>sosud<sup>j</sup>u</em> comes from the word <em>sosu </em>meaning sword. The affix d<sup>j </sup>when added to <em>sosu</em> translates to little sword. With the invention of writing utensils, the words had remand causing any utensil used to write script to be known as a little sword. This is why the word of pencil and knife are the same word in modern Yozah. Ancient Yozah was purely consonantal meaning that the language only represented consonants in the writing system. Additionally, the writing system did not distinguish between palatalization of consonants. The vowels as well as the consonant palatalization had to be inferred based on the context. Many words that exist in modern Yozah come directly from words from ancient Yozah. While this stage in Yonah&rsquo;s development is called ancient script there are still hundreds of years prior to these systems that is still undiscovered.</p>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2" width="719" class="subtable">
+                  <p><em>Examples:</em></p>
+                </td>
+              </tr>
+              <tr>
+                <td width="210" class="subtable-light">
+                  <img class="image" src="img/artifact-1.jpg" alt="Artifact 1">
+                </td>
+                <td width="510" class="subtable-light">
+                  <p>&nbsp;</p>
+                  <p><strong>Artifact #A-1346:</strong></p>
+                  <p>This artifact is a smoothed stone tablet that has been engraved with some sharp metal utensil. The writing appears to be a rudimentary recipe for making bread.</p>
+                  <p>&nbsp;</p>
+                  <p>&nbsp;</p>
+                  <p>&nbsp;</p>
+                  <p>&nbsp;</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <br>
+          <!--Traditional Yozah-->
+          <table class="tables">
+            <tbody>
+              <tr>
+                <td colspan="2" width="719" class="subtable">
+                  <p><strong>Traditional Yozah:</strong></p>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2" width="719" class="subtable-light">
+                  <p>Traditional Yozah is the script that exists between ancient and the modern system as the transitional period. This stage in the script began to mark vowels. Just like modern Yozah script, vowels were added to the center of the consonant to represent that the vowel that follows the consonant. Vowels in this script only showed if they were are natural or non-natural and did not yet distinguish between the definite and indefinite when used in an article. Traditional script still did not mark palatalization. Writing utensils similar to pencils were used to write this script on sheets of paper. Paper was often reserved for higher ranking members of a clan because of its rarity.</p>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2" width="719" class="subtable">
+                  <p><em>Example:</em></p>
+                </td>
+              </tr>
+              <tr>
+                <td width="102" class="subtable-light">
+                  <img class="image" src="img/artifact-2.jpg" alt="Artifact 2">
+                </td>
+                <td width="618" class="subtable-light">
+                  <p>&nbsp;</p>
+                  <p><strong>Artifact #F-0056</strong></p>
+                  <p>&nbsp;</p>
+                  <p>This artifact features traditional script written on paper. The image shows a section of a written exchange in the form of a letter.</p>
+                  <p>&nbsp;</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <br>
+          <h1><strong>Culture</strong></h1>
+          <hr>
+          <!--Yabʲuch-->
+          <table class="tables">
+            <tbody>
+              <tr>
+                <td width="719" class="subtable">
+                  <p><strong>Yabʲuch</strong></p>
+                </td>
+              </tr>
+              <tr>
+                <td width="719" class="subtable-light">
+                  <p>Yozah is the language of the <em>Y</em>a<em>bʲuch </em>people. The <em>Y</em>a<em>bʲuch </em>are a group of nomadic tech-worshiping people who live in the sprawling rocky deserts of a post-apocalyptic earth. Little is known about the <em>Y</em>a<em>bʲuch </em>culture. What is known is that the speakers of Yozah are strange and mysterious and hold technology in high regard. They are seemingly human although no one has ever seen a <em>Yabʲuch </em>person without their iconic garb which conceals their entire body. They speak through a synthesizer voice modulator which makes their voice sound robotic, further hiding their voice. Some fear that the Yabʲuch are anything but human.</p>
+                  <p>&nbsp;</p>
+                  <p>Because of the obsession that the <em>Yabʲuch</em> culture has with technology, The Yozah language reflect this obsession through the use of noun classes. Since they emphasize technology and man-made creations, their language distinguishes between natural and non-natural nouns. Additionally, the <em>Yabʲuch</em> culture emphasizes people and personal relationships, which is why pronouns are allowed to affix with verbs.</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <br>
+          <!--Names-->
+          <table class="tables">
+            <tbody>
+              <tr>
+                <td width="719" class="subtable">
+                  <p><strong>Names:</strong></p>
+                </td>
+              </tr>
+              <tr>
+                <td width="719" class="subtable-light">
+                  <p>In Yozah there are no distinctions between masculine and feminine names. All name can be used for any gender. There is however a distinction between youth names and adult names. Youth names are the names that children use until they have been pronounced and adult. A youth name is usually a combination of parts of the parent&rsquo;s name(s) as well as the ending <em>-ron</em> which means child of.&nbsp; Once a child reaches adulthood, they able to take on a new name of their choosing. Their clan will help in providing a list of names for the new adult to pick from however it is still welcome to pick something different. Sometimes new adults will take the name of one of their parents as a sign or respect or as a way to carry on a family name. This is most often practiced with royalty. This new name is the adult name and will become their first name while their youth name then becomes their middle name. A person&rsquo;s last name is the clan or group they are a member of. Adult names will often times have something to do with what the person is good at, what they are known for or what they did to complete their trial to become an adult.</p>
+                </td>
+              </tr>
+              <tr>
+                <td width="719" class="subtable">
+                  <p><em>Adult Names:</em></p>
+                </td>
+              </tr>
+              <tr>
+                <td width="719" class="subtable-light">
+                  <p><em>Sosunder &ndash; </em>someone who is a great fighter who defends and protects. <em>Sosu</em> means sword and <em>ndero</em> means good creating the literal meaning good sword. It is cultural translated to mean to good with a sword. While modern fighter might not use swords, this is still the common way to naming someone who is good at fighting.</p>
+                  <p>&nbsp;</p>
+                  <p><em>Porumazak &ndash; </em>This is for someone who works with fire usually a person who makes metals or cooks food. The literal translation is fire player. <em>Poren</em> means fire and <em>Umazak</em> meaning to play.</p>
+                  <p>&nbsp;</p>
+                  <p>Deruden &ndash; this name is used for adventurer</p>
+                </td>
+              </tr>
+              <tr>
+                <td width="719" class="subtable">
+                  <p><em>Youth Names:</em></p>
+                </td>
+              </tr>
+              <tr>
+                <td width="719" class="subtable-light">
+                  <p><em>Sosporen &ndash; </em>child of S<em>osunder </em>and<em> porumazah</em></p>
+                  <p><em>Deren &ndash; </em>child of<em> Deruden</em></p>
+                </td>
+              </tr>
+              <tr>
+                <td width="719" class="subtable">
+                  <p><em>Clan Names</em></p>
+                </td>
+              </tr>
+              <tr>
+                <td width="719" class="subtable-light">
+                  <p><em>Poren &ndash; </em>fire clan</p>
+                  <p><em>Marem &ndash; </em>moon clan</p>
+                </td>
+              </tr>
+              <tr>
+                <td width="719" class="subtable">
+                  <p><em>Full Name:</em></p>
+                </td>
+              </tr>
+              <tr>
+                <td width="719" class="subtable-light">
+                  <p>Deruden <em>Sosporen Marem</em></p>
+                  <p>Adventurer, child of S<em>osunder </em>and<em> porumazah, </em>moon clan</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <br>
         </div>
       </main>
     </body>

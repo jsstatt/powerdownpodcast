@@ -19,14 +19,23 @@
   --text-secondary: #b6b6b6;
   --bg-primary: #23232e;
   --bg-secondary: #141418;
+  --bg-3: #b6b6b6;
+  --bg-4: #9C9C9C;
+  --bg-base: #C2C2C2;
+  --icon:  #34c9eb;
+
   --transition-speed: 300ms;
 }
 
 body {
-  background-color: black;
-  color: white;
+  background-color: var(--bg-base);
+  color: black;
   margin: 0;
   padding: 0;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+body h1, h2, h3 {
   font-family: 'Share Tech Mono', monospace;
 }
 
@@ -52,10 +61,9 @@ main {
 }
 
 main p {
-  font-size: 24px;
+  font-size: 20px;
+  line-height: 95%;
 }
-
-
 
 .tabcontent {
   display: none;
@@ -66,7 +74,18 @@ main p {
 }
 
 .tables {
-  width: 100%
+  width: 100%;
+}
+
+.subtable {
+  background: var(--bg-4);
+  padding: 2px 10px 2px 10px;
+}
+
+.subtable-light {
+  background: var(--bg-3);
+
+  padding: 1px 10px 1px 10px;
 }
 
 .btn {
@@ -148,8 +167,57 @@ main p {
 .nav-link i{
   min-width: 2rem;
   margin: 0 1.5rem;
-  color: #34c9eb;
-  transition: var(--transition-speed)
+  color: var(--icon);
+  transition: var(--transition-speed);
+}
+
+.table-container{
+
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 220px;
+  height: 100vh;
+  color: white;
+  background-color: var(--bg-primary);
+}
+
+.sidebar-nav {
+    list-style-type: none;
+    padding: 15px;
+    margin: 0;
+    align-items: center;
+    height: 100%;
+}
+
+.sidebar-item {
+  width: 100%;
+}
+
+.sidebar-item a{
+  text-decoration: none;
+}
+
+.sidebar-text {
+  margin-right: 1rem;
+  font-size: 14px;
+  color: var(--text-secondary);
+  transition: var(--transition-speed);
+}
+
+.sidebar-text strong{
+  color: white;
+}
+
+.sidebar-text:hover {
+  color: var(--icon);
+}
+
+.sidebar-text strong:hover {
+  color: var(--icon);
 }
 
 .yozah {
@@ -158,6 +226,33 @@ main p {
 
 .font-white{
   color: white;
+}
+
+input {
+  width: 100%;
+  height: 5rem;
+  background: var(--bg-3);
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  margin: 8px 0;
+  outline: none;
+  padding: 8px;
+  box-sizing: border-box;
+  font-size: 42px;
+  font-family: yozahregular;
+}
+
+input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.image {
+  width: 100%;
+}
+
+.img-holder img {
+  border-style: none;
+  text-decoration:none
 }
 
 /* small screen */
@@ -207,7 +302,8 @@ main p {
   }
 
   .page {
-    padding: 100px;
+    padding: 50px;
+    padding-right: 250px;
   }
 
 }
