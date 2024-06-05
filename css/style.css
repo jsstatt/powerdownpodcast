@@ -150,3 +150,26 @@ body {
   border: 1px solid #ccc;
   border-top: none;
 }
+
+
+.img-center {
+position: absolute;
+}
+
+.div-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.img-1 {
+  transform: rotate(30deg);
+}
+
+.img-2 {
+  transform: rotate(60deg);
+
+.img-3 {
+  transform: rotate(105deg);
+}

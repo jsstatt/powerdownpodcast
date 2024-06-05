@@ -49,3 +49,35 @@ $(document).ready(function () {
 
   })
 })
+
+
+const button = document.querySelector('.rotate-obj');
+const rotate_obj = document.querySelector('.rotate-obj');
+let rotateDeg = 0;
+
+button.addEventListener('click', () => {
+  rotateDeg = rotateDeg + 15;
+  rotate_obj.style.transform = 'rotate('+rotateDeg+'deg)';
+  console.log("hi");
+})
+
+const button2 = document.querySelector('.rotate-obj2');
+const rotate_obj2 = document.querySelector('.rotate-obj2');
+let rotateDeg2 = 0;
+
+button2.addEventListener('click', () => {
+  rotateDeg2 = rotateDeg2 + 15;
+  rotate_obj2.style.transform = 'rotate('+rotateDeg2+'deg)';
+  console.log("hi");
+})
+
+
+const button3 = document.querySelector('.rotate-obj3');
+const rotate_obj3 = document.querySelector('.rotate-obj3');
+let rotateDeg3 = 0;
+
+button3.addEventListener('click', () => {
+  rotateDeg3 = rotateDeg3 + 15;
+  rotate_obj3.style.transform = 'rotate('+rotateDeg3+'deg)';
+  console.log("hi");
+})
